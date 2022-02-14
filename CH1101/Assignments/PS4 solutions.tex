@@ -1,0 +1,193 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amssymb, amsmath}
+\usepackage[none]{hyphenat}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\MakeUppercase{CH1101 PS-4}}
+\fancyhead[R]{\slshape Priyanshu Mahato: \href{mailto:pm21ms002@iiserkol.ac.in}{\color{purple}pm21ms002@iiserkol.ac.in}}
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\footrulewidth}{1pt}
+% \renewcommand{\baselinestretch}{1.2}
+
+\setlength{\headheight}{16pt}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{3em}
+
+\begin{document}
+		\thispagestyle{empty}
+	
+	\begin{titlepage}
+		\begin{center}
+			\vspace{2cm}
+			\huge\textbf{CH1101}\\
+			\vspace{1cm}
+			\large\textbf{Elements of Chemistry}
+			\vfill
+			\line(1, 0){470}\\[14pt]
+			\huge\textbf{Problem Sheet - 4}\\[10pt]
+			\Large\textbf{Chemical Bonding: Molecular Orbital Theory}\\[14pt]
+			\line(1, 0){470}
+			\vfill
+			By: Priyanshu Mahato\\
+			Roll No.: pm21ms002\\
+			\today
+		\end{center}
+	\end{titlepage}
+	
+	\setcounter{page}{1}
+	
+	\textbf{Question 1: }Explain what is meant by the overlap integral between two AO’s, and also explain why this 
+	quantity goes to zero for large distances between the two AO’s. How would you expect the plot of S(R) to compare between two 1s AO’s and two 2s AO’s?
+	
+	\textbf{Answer: }
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.65]{Energy}
+		\caption{Plots of the energies, as a
+			function of the internuclear
+			distance R (in Bohr radii), of the
+			two MO's arising from the
+			combination of two 1s AO's in $H^{+}_{2}$. $E_{+}$ and $E_{-}$ are the energies of the
+			MOs $\Psi_{+}$ and $\Psi_{-}$, respectively. At
+			large values of R the energies tend
+			to the same value (the energy of a
+			hydrogen atom and a proton)
+			which has arbitrarily been taken as zero.}
+		\label{figure:ED}
+	\end{figure}
+
+	Here, as we see in Figure \ref{figure:ED}, as the internuclear separation decreases, the MO's shift in energy further and further away from the energy of the AO's. The calculation
+	of the energy shift at a particular internuclear separation is not straightforward, even for the simplest case of two interacting 1s orbitals. However, a useful guide to the strength of the interaction between the AO's, and hence
+	the energy shift of the MO's, can be obtained by looking at the overlap integral. The overlap integral between two AOs is found by multiplying together the two AO wavefunctions, and then taking the integral of this product.  So the overlap integral is the area under a plot of the product of the two AO's.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{Overlap}
+		\caption{Plot of the overlap integral S(R) for two 1s orbitals as a function of the internuclear
+			separation R. Beneath the plot is shown illustrations of how the integral is computed. S(R) is
+			the integral of the product of the two wavefunctions, which in this case is the area under the graph
+			of this product. The two AO wavefunctions are shown in green and purple for the two atoms, and
+			beneath these is plotted the product of these two functions. The overlap integral is the area shown
+			in red.}
+		\label{figure:overlap}
+	\end{figure}
+	
+	As R increases the two 1s wavefunctions move apart, so the range over which the two functions overlap when they both have significant amplitude decreases. As a result the product of the two functions is smaller, and therefore the area under the product, and hence the overlap integral, decreases. From this graph we can see that when $R = 6a_{0}$ the overlap integral is small, so we would not expect the MO's to differ very much in energy from the AO's. Therefore, when the AO's are far apart (i.e., $R > 6a_{0}$), the amount of overlap is very less and as R increases the two 1s wavefunctions move apart, so the range over which the two functions overlap when they both have significant amplitude decreases.
+	As a result the product of the two functions is smaller, and therefore the area under the product, and hence the overlap integral, decreases and thus goes to zero.
+	
+	The size of the overlap integral at a particular value of R is clearly going to depend on the size of the AO's. The smaller the AO's, the smaller will be the value of S(R) at a particular value of R on the grounds that the wavefunctions overlap to a smaller extent. And therefore, since  the size of 2s orbital is greater than the 1s orbital, I'd expect the plot or rather, the overlap integral itself to be greater in value for 2s orbital than in the case of 1s orbital.
+	
+	\pagebreak
+	
+	\textbf{Question 2: }Shown below is a plot of the overlap integral between two 2p orbitals. The blue line is for 
+	the sideways–on overlap to give $\pi$ MO’s, whereas the red line is for the head-on overlap to give $\sigma$ MO’s. Explain the form of these two curves.
+	
+		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{bond}
+		\caption{}
+		\label{figure:Q2}
+	\end{figure}
+
+	\textbf{Answer: }For the $\pi$ plot:-\\
+	In the $\pi$ type overlap, the lobes with same sign overlap. There is no overlap between lobes with opposite signs. Therefore, the value of he overlap integral is positive. The overlap integral has maximum value when the intermolecular distance is zero. As the intermolecular distance increases,the range over which the AO's overlap (with significant amplitude) decreases. Therefore, the overlap integral goes to zero at large intermolecular distances.
+	
+	For the $\sigma$ plot:-\\
+	In the $\sigma$ type overlap, the lobes with the same sign and the lobes with opposite signs both overlap. When the internuclear distance is large, the range over which the lobes overlap is almost zero. Therefore, the overlap integral goes to zero at large intermolecular distances. As the internuclear distance decreases, two phenomena occur. First the lobes with same sign overlap and hence the overlap integral is positive. However, only one lobe from each orbital overlaps thereby making the overlap integral small in value. As the internuclear distance decreases further, both lobes from each orbital overlap with the lobe of the opposite sign, thus making the product and in turn the overlap integral negative. As the internuclear distance decreases further, the amount of overlap increases and therefore the negative value of the overlap integral increases.
+	
+	\textbf{Question 3: }Suppose there is overlap between the 2p AO’s from two atoms of A, where z is the 
+	internuclear axis. Sketch the form of the MO diagram, and the form of the bonding and 
+	antibonding MO’s.
+	
+	\textbf{Answer: }
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{2pMO}
+		\caption{Contour plots of the $\pi_{u}$
+			and $\pi_{g}$ MO's formed by overlap of
+			two $2p_{x}$ AO's. The plots are taken
+			in the xz-plane and the scale is
+			given in units of Bohr radii. The
+			horizontal green zero contour
+			indicates the nodal yz-plane, and
+			in addition the antibonding $\pi_{g}$
+			MO has a nodal xy-plane. For the
+			bonding MO, electron density is
+			concentrated in the region between
+			the two nuclei, but not actually
+			along the internuclear axis.}
+		\label{figure:2pMO}
+	\end{figure}
+
+\pagebreak
+
+	\textbf{Question 4: } Label the following molecular orbitals with the appropriate symmetry labels $\sigma,\ \pi,\ g,\ and\ u$ (such as $\sigma_{u}$)
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.4]{AO}
+		\caption{}
+		\label{figure:AO}
+	\end{figure}
+
+	\textbf{Answer:- }\\
+	A. $\sigma_{g}$\\
+	B. $\sigma_{u}$\\
+	C. $\sigma_{g}$\\
+	D. $\pi_{u}$\\
+	E. $\pi_{g}$
+	
+	\textbf{Question 5: }For a molecule $A_{2}$, one of the MO’s can be formed using $2p_{z}$ orbital. If the internuclear 
+	axis lies along the z direction, please write the appropriate wavefunctions for the bonding 
+	MO and the anti-bonding MO using linear combination of the $2p_{z}$ orbital. Sketch the 
+	molecular orbitals formed.
+	
+	\textbf{Answer: }For the Bonding MO (Low Energy Solution), the LCAO Wavefunctions would look like,
+	$$\Psi_{+} = c_{A}\Psi_{A} + c_{B}\Psi_{B}$$
+	or,
+	$$\left| \Psi_{B}(\vec{r}) \right> = \dfrac{1}{\sqrt{2}} \left[ \left| \phi_{2p_{z}} (\vec{r} - d\hat{z})\right> + \left| \phi_{2p_{z}} (\vec{r} + d\hat{z})\right> \right]\ (B\ here\ represents\ Bonding\ MO's)$$
+	
+	For the Anti-Bonding MO (High Energy Solution), the LCAO Wavefunctions would look like,
+	$$\Psi^{*}_{-} = c_{A}\Psi_{A} - c_{B}\Psi_{B}$$
+	or,
+	$$\left| \Psi_{A}(\vec{r}) \right> = \dfrac{1}{\sqrt{2}} \left[ \left| \phi_{2p_{z}} (\vec{r} - d\hat{z})\right> - \left| \phi_{2p_{z}} (\vec{r} + d\hat{z})\right> \right]\ (A\ here\ represents\ Anti-Bonding\ MO's)$$
+	
+	Now, for the diagrams,
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{2pzMO}
+		\caption{$\sigma$ overlap possibilities in case of $2p_{z}$}
+		\label{figure:2pz1}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.25]{2pzMO2}
+		\caption{$\pi$ overlap possibilities in case of $2p_{z}$}
+		\label{figure:2p21}
+	\end{figure}
+
+	\textbf{Question 6: } For a molecule $A_{2}$, which of the following linear combination of AO's would give a zero 
+	overlap-integral $(S=0)$. Consider the internuclear axis to lie along the x-axis.\\
+	(i) s and $p_{z}$\\ 
+	(ii) s and $p_{x}$ \\
+	(iii) $p_{z}$ and $p_{z}$ \\
+	(iv) $p_{x}$ and $p_{z}$\\ 
+	(v) $p_{x}$ and $p_{x}$\\
+	
+	\textbf{Answer: }(i) and (iv)
+\end{document}

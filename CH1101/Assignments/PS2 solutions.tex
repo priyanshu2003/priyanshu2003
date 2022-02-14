@@ -1,0 +1,409 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage[none]{hyphenat}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage[makeroom]{cancel}
+
+\pagestyle{fancy}
+
+\fancyhead{}
+\fancyfoot{}
+\fancyhead [L]{\slshape \MakeUppercase{CH1101 Asssignment-2}}
+\fancyhead[R]{{Priyanshu Mahato - PM21MS002}}
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\footrulewidth}{1pt}
+
+% \setlength{\headheight}{13.59999pt}
+\setlength\parindent{0em}
+
+\begin{document}
+		\thispagestyle{empty}
+		\begin{titlepage}
+			\begin{center}
+				\vspace{2cm}
+				\Large\textbf{Chemistry CH1101}\\
+				\vspace{1cm}
+				\large\textbf{Assignment - 2}
+				\vfill
+			    \line(1,0){450}\\[16pt]
+			    \huge\textbf{Structure of the Atom}\\[10pt]
+			    \large\textbf{Problem Sheet - 2 Solutions}\\[16pt]
+			    \line(1,0){450}
+			    \vfill
+			    By: Priyanshu Mahato\\
+			    Roll No.: PM21MS002\\
+			    \today\\				
+			\end{center}
+		\end{titlepage}
+	\setcounter{page}{1}
+	\textbf{Question 1:} In a single graph with proper axes labels, draw the radial part of the wavefunction for 1s, 2s,
+	2p and in another graph draw for 3s, 3p, 3d orbitals for a Hydrogen atom indicating nodes and relative position of the maxima. Repeat the same exercise for the Radial Probability 
+	Distribution Function.\\[16pt]
+	
+	I plotted these graphs using the following equations and Python (specifically NumPy and MatPlotLib):\\[16pt]
+	
+		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{Screenshot 2022-01-22 005242.png}
+		\label{figure:pta}
+	\end{figure}
+	
+	Note: The nodes in the graphs are the points where the graph touches the $y=0.0$ line and in the contour plots, the nodes are represented by the darkest regions of the graph.\\[16pt]
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{Radial Wavefunction for 1s.png}
+		\label{figure:RW1s}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{Contour plot for Radial Wavefunction of 1s.png}
+		\label{figure:CRW1s}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{Probability Density for 1s.png}
+		\label{figure:PD1s}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{Contour Plot for Probability density of 1s.png}
+		\label{figure:CPD1s}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{Radial Wavefunction for 2s.png}
+		\label{figure:RW2s}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot of Radial Wavefunction for 2s.png}
+	\label{figure:CRW2s}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{Probability Density for 2s.png}
+		\label{figure:PD2s}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot for Probability Density of 2s.png}
+	\label{figure:CPD2s}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Radial Wavefunction of 2p.png}
+	\label{figure:RW2p}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot for Radial Wavefunction of 2p.png}
+	\label{figure:CRW2p}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Probability Density for 2p.png}
+	\label{figure:PD2p}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot of Probability Density for 2p.png}
+	\label{figure:CPD2p}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Radial Wavefunction of 3s.png}
+	\label{figure:RW3s}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot for Radial Wavefunction of 3s.png}
+	\label{figure:CRW3s}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Probability Density of 3s.png}
+	\label{figure:PD3s}
+\end{figure}	
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Contour Plot for Probability Density of 3s.png}
+\label{figure:CPD3s}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Radial Wavefunction of 3p.png}
+	\label{figure:RW3p}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot for Radial Wavefunction of 3p.png}
+	\label{figure:CRW3p}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Probability Density of 3p.png}
+	\label{figure:PD3p}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot of Probability Density of 3p.png}
+	\label{figure:CPD3p}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Radial Wavefunction of 3d.png}
+	\label{figure:RW3d}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot for Radial Wavefunction of 3d.png}
+	\label{figure:CRW3d}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Probability Density of 3d.png}
+	\label{figure:PD3d}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot for Probability Density of 3d.png}
+	\label{figure:CPD3d}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{RPDF for 1s.png}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour plot for RPDF of 1s.png}
+\end{figure}
+
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{RPDF for 2s.png}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot of RPDF for 2s.png}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{RPDF of 2p.png}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot for RPDF of 2p.png}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{RPDF of 3s.png}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot for RPDF of 3s.png}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{RPDF of 3p.png}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot for RPDF of 3p.png}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{RPDF of 3d.png}
+\end{figure}
+
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Contour Plot for RPDF of 3d.png}
+\end{figure}
+\pagebreak
+
+Now, combining all the graphs of Radial Wavefunctions, we get,\\[16pt]
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Combined Wavefunction.png}
+\end{figure}
+Now, combining all the graphs of Radial Probability Densities, we get,\\
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Combined RPD.png}
+\end{figure}
+Now, combining all the graphs of Radial Probability Distribution Functions, we get,\\
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{RDF.png}
+\end{figure}
+
+\pagebreak
+
+\textbf{Question 2: }The radial probability distribution function (RDF), $P(r)$, for the $1s$ orbital is defined as: $$P_{1s}(r) = 4\pi r^{2} [\Psi_{1s}(r)]^{2}$$
+For an electron in a 1s orbital, how does the RDF vary with distance from the nucleus?\\
+Explain why it is that although the 1s wavefunction is a maximum at the nucleus, the
+corresponding RDF goes to zero at the nucleus. Also, explain why the RDF shows a maximum, 
+and why the RDF goes to zero for large values of the distance r.\\[16pt]
+
+\textbf{Answer: }For the radial distribution we sum up the probabilities within (very thin) shells at different distances from the core. If the radius get's bigger the volume in this shell gets bigger. Remember that the surface of a sphere goes by $4\pi r^{2}$ so the volume of the shell is essentially for all practical purposes $4 \pi r^{2} \Delta r$. At the core/nucleus the radius is zero which means the volume is zero and thus the probability is zero too.\\
+At the same time the probability of finding the electron in a point at a certain distance goes down, but the volume goes up. Because of the scaling of the volume and the "decay" of the probability to find it in a point further away it turns out that there's a maximum of finding the electron at a certain distance away from the core (but not a single point at that distance).That is where we encounter a peak in the graph.\\
+Then again, the probability distribution decreases exponentially.\\
+
+The RDF goes to zero for large values of $r$ from the nucleus because although the quantity $4\pi r^{2}$ keeps increasing, but the value of $[\Psi_{1s}(r)]^{2}$ keeps decreasing at a faster rate than $4\pi r^{2}$ which leads to the decay of the overall value of the function.\\
+
+\textbf{Question 3: }The Radial Distribution Function of 3s, 3p and 3d is given below.\\[16pt]
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{Screenshot 2022-01-22 205423.png}
+	\end{figure}
+(i) In which of the orbitals is the highest probability of finding electron [indicated by the maxima of $P_{1s}(r)$] closest to the nucleus.\\
+(ii) If you consider distance of $0.1a_{0}$ from the nucleus, in which of the three orbitals would you have the maximum probability of finding electrons.\\[16pt]
+
+\textbf{Answer: } (i) $3d$, as the maxima for $3d$ occurs nearest to the nucleus i.e., $r/a_{0}=0$ as compared to the graphs of $3s$ and $3p$.\\
+(ii) $3s$, because though the highest probability of finding the electron closest to the nucleus is in case of $3d$, but the graph of $3d$ rises slowly at first and then increases rapidly, whereas in the case of $3s$ there is a local maximum nearer to the nucleus than the global maximum which ensures that at a distance so close to the nucleus, probability of finding a $3s$ electron would be more than that of a $3d, or 3p$ electron.\\
+
+\textbf{Question 4: }The RDF for a 1s orbital is $4\pi r^{2}[\Psi_{1s}(r)]^{2}$.\\
+Given that the 1s wavefunction is $\Psi_{1s}(r)=N_{1s} e^{\frac{-r}{a_{0}}}$, show that the RDF is given by $P_{1s}(r)=4N_{1s}^{2}\pi r^{2} e^{\frac{-2r}{a_{0}}}$ ($N_{1s}$ is the pre-exponential constant in the 1s wave function).\\
+
+We can find the maximum in this RDF by differentiating it with respect to r, and then setting
+the derivative to zero. Show that the required derivative is
+$$\frac{dP_{1s}(r)}{dr}=8N_{1s}^{2}\pi r e^{\frac{-2r}{a_{0}}}-8N_{1s}^{2}\pi \frac{r^{2}}{a_{0}} e^{\frac{-2r}{a_{0}}}$$
+
+Further show that this differential goes to zero at r = a0, and use a graphical argument to
+explain why this must correspond to a maximum.\\
+
+For a hydrogen-like atom with nuclear charge Z, the 1s wavefunction is $\Psi_{1s}(r)=N_{1s}e^{\frac{-Zr}{a_{0}}}$. Show that the corresponding RDF has a maximum at $r = \frac{a_{0}}{Z}$.\\[16pt]
+
+\textbf{Answer: }The RDF for a 1s orbital is defined as $4\pi r^{2}[\Psi_{1s}(r)]^{2}$ and value of $\Psi_{1s}(r)$ is given to be $\Psi_{1s}(r)=N_{1s}e^{\frac{-r}{a_{0}}}$. So, $[\Psi_{1s}(r)]^{2}=N_{1s}^{2}e^{\frac{-2r}{a_{0}}}$. Now, according to the formula given in the question, RDF becomes $4\pi r^{2} . N_{1s}^{2}e^{\frac{-2r}{a_{0}}}$, which on rearranging becomes, $$P_{1s}(r)=4N_{1s}^{2}\pi r^{2} e^{\frac{-2r}{a_{0}}}$$ which is the required equation.\\
+
+Now, differentiating the RDF, we have,
+\begin{align}
+	\frac{dP_{1s}(r)}{dr}&=8N_{1s}^{2}\pi re^{\frac{-2r}{a_{0}}} + 8N_{1s}^{2}\pi re^{\frac{-2r}{a_{0}}}\left(\frac{-r}{a_{0}}\right)\\
+	\Rightarrow\frac{dP_{1s}(r)}{dr}&=8N_{1s}^{2}\pi r e^{\frac{-2r}{a_{0}}}-8N_{1s}^{2}\pi \frac{r^{2}}{a_{0}} e^{\frac{-2r}{a_{0}}}
+\end{align}
+which is the required equation.\\
+
+When $r=a_{0}$, the differential reduces to,
+$$\frac{dP_{1s}(r)}{dr}=8N_{1s}^{2}\pi a_{0} e^{-2}-8N_{1s}^{2}\pi \frac{a_{0}^{2}}{a_{0}} e^{-2}$$
+$$\Rightarrow\frac{dP_{1s}(r)}{dr}=8N_{1s}^{2}\pi a_{0} e^{-2}-8N_{1s}^{2}\pi a_{0} e^{-2}=0$$
+as demanded by the question.\\
+
+Now, for the graphical argument, let's first look at the graph,\\
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Q4.png}
+	\caption{Graph}
+	\label{figure:graph}
+\end{figure}
+
+so, the derivative indeed becomes zero as the function reaches a maximum/peak as predicted by our calculations. This happens because the derivative of the function essentially represents the slope of the graph of the function. The slope is defined as the tangent of the angle ($\tan\theta$) between the tangent drawn to the graph at a point and the positive direction of X-Axis. And, as we know, the slope becomes zero ($\tan\theta=0 \Leftrightarrow \theta=0$) in only two cases, i.e., either when the graph reaches a maxima or a minima, or in other words, whenever the slope changes its sign from positive to negative or vice-versa.\\
+
+As is visible from Figure \ref{figure:graph} we can say that the RDF reaches its maximum at $r=1$ when $a_{0}\ and\ Z$ are taken to be equal to $1$ each. This gives us a hint that when $a_{0}$ and $Z$ aren't zero, to reach the maximum value, $r$ would have to become equal to $\dfrac{a_{0}}{Z}$. To check that analytically, we follow the approach that, we can find the maximum in this RDF by differentiating it with respect to r, and then setting
+the derivative to zero.\\
+For a hydrogen-like atom with nuclear charge Z, the 1s wavefunction is $\Psi_{1s}(r)=N_{1s}e^{\frac{-Zr}{a_{0}}}$. So, the differential of the RDF would become,
+$$\frac{dP_{1s}(r)}{dr}=8N_{1s}^{2}\pi r e^{\frac{-2Zr}{a_{0}}}-8N_{1s}^{2}\pi \frac{Zr^{2}}{a_{0}} e^{\frac{-2Zr}{a_{0}}}$$
+Now, replacing $r$ with $\frac{a_{0}}{Z}$, we get,
+$$\frac{dP_{1s}(r)}{dr}=8N_{1s}^{2}\pi \frac{a_{0}}{Z} e^{-2}-8N_{1s}^{2}\pi \frac{Za_{0}^{2}}{a_{0}Z^{2}} e^{-2}$$
+$$\Rightarrow\frac{dP_{1s}(r)}{dr}=8N_{1s}^{2}\pi \frac{a_{0}}{Z} e^{-2}-8N_{1s}^{2}\pi \frac{a_{0}}{Z} e^{-2}=0$$
+Therefore, the derivative of the RDF in this case also reduces to zero on taking $r=\frac{a_{0}}{Z}$, which in turn, indicates that it reaches its maximum value when $r=\frac{a_{0}}{Z}$.\\
+
+\textbf{Question 5: }The radial part of the 3p AO wave function is:
+$$R_{3,1}(r)=N_{3,1}\left[6\left(\frac{r}{a_{0}}\right)-\left(\frac{r}{a_{0}}\right)^{2}\right]e^{\frac{-r}{3a_{0}}}$$
+Determine the position of the radial node in the 3p orbital?\\
+
+\textbf{Answer: }Radial Node means the position where probability $P_{n,l}(r)=0$. And $P_{n,l}(r)=0$ whenever $R_{n,l}=0$ as the value of $P_{n,l}$ directly depends on the value of $R_{n,l}$. So, let's calculate the points where $R_{3,1}=0$.
+
+$$R_{3,1}(r)=N_{3,1}\left[6\left(\frac{r}{a_{0}}\right)-\left(\frac{r}{a_{0}}\right)^{2}\right]e^{\frac{-r}{3a_{0}}}=0$$
+
+$$\Rightarrow\cancel{N_{3,1}}\left[6\left(\frac{r}{a_{0}}\right)-\left(\frac{r}{a_{0}}\right)^{2}\right]\cancel{e^{\frac{-r}{3a_{0}}}}=0$$
+
+$$\Rightarrow6\left(\frac{r}{a_{0}}\right)-\left(\frac{r}{a_{0}}\right)^{2}=0$$
+
+$$\Rightarrow6\cancel{\left(\frac{r}{a_{0}}\right)}=\left(\frac{r}{a_{0}}\right)^{\cancel{2}}$$
+
+$$\Rightarrow6=\left(\frac{r}{a_{0}}\right)$$
+
+$$r=6a_{0}$$
+Therefore, radial node of the 3p orbital is located at a distance $r=6a_{0}$ from the centre/nucleus.\\
+\pagebreak
+
+\textbf{Question 6: }6. Show how you will draw contour plots of equal probability iso-surfaces of the 3s orbital from the following plot of the wavefunction (the red has $+ve$ values, while the blue has $-ve$ values):-
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Q5.png}
+	\end{figure}
+
+\textbf{Answer: }
+
+For the answer, let us first have a look at the actual contour plot of the Radial Wavefunction of 3s.
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Q6.png}
+\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Q6p.png}
+\end{figure}
+
+Therefore, the iso-surfaces for 3s orbital would look somewhat like this,
+
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{x.png}
+\end{figure}
+
+
+
+
+
+\end{document}
