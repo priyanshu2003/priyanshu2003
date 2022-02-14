@@ -4,6 +4,7 @@
 - 🌱 I’m currently learning Python(NumPy, SciPy, AstroPy, MatPlotLib, SymPy, Pandas, Numba, etc.)
 - 💞️ I’m looking to collaborate on Science Projects involving Python programming
 - 📫 How to reach me on email: priyanshum.2003@gmail.com
+- #### Check out the other branch. That's where all the stuff is!
 
 
 <!---
