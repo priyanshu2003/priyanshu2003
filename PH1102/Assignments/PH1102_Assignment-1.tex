@@ -1,0 +1,422 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsfonts, amssymb, amsmath}
+\usepackage[none]{hyphenat}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{listings}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\MakeUppercase{PH1102 Expt. No.: 04}}
+\fancyhead[R]{\slshape Priyanshu Mahato: \href{mailto:pm21ms002@iiserkol.ac.in}{\color{purple}pm21ms002@iiserkol.ac.in}}
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\footrulewidth}{1pt}
+% \renewcommand{\baselinestretch}{1.2}
+\renewcommand\thesection{\arabic{section}}
+
+\setlength{\headheight}{16pt}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{3em}
+
+\lstset{frame=tb,
+	language=Python,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+	}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{ChadDarkBlue}{rgb}{.1,0,.2}  
+\definecolor{ChadBlue}{rgb}{.1,.1,.5}  
+\definecolor{ChadRoyal}{rgb}{.2,.2,.8}  
+%\definecolor{ChadGreen}{rgb}{0,.35,.1}
+%\definecolor{ChadGreen}{rgb}{0,.5,.25}  % Too bright
+%\definecolor{ChadGreen}{rgb}{0,.4,.2}    % Still too bright
+\definecolor{ChadGreen}{rgb}{0.5, 0, 0.2}    % Dark Green
+%\definecolor{ChadRed}{rgb}{.8,.1,.2}    % Too bright
+\definecolor{ChadRed}{rgb}{.5,0,.5}  % purple
+
+\begin{document}
+	\thispagestyle{empty}
+	\begin{titlepage}
+		\begin{center}
+			\vspace{2cm}
+			\huge\textbf{PH1102}\\
+			\vspace{1cm}
+			\large\textbf{Physics Laboratory I}
+			\vfill
+			\line(1, 0){470}\\[14pt]
+			\huge\textbf{\color{ChadBlue}\sffamily Experiment Number - 4}\\[10pt]
+			\Large\textbf{\color{mauve}\sffamily Young's Modulus}\\[14pt]
+			\line(1, 0){470}
+			\vfill
+			By: Priyanshu Mahato (\href{mailto:pm21ms002@iiserkol.ac.in}{\emph{\color{dkgreen}pm21ms002@iiserkol.ac.in}})\\
+			Roll No.: pm21ms002\\
+			\today
+		\end{center}
+	\end{titlepage}
+
+	\thispagestyle{empty}
+	\tableofcontents
+	\thispagestyle{empty}
+	\clearpage
+	
+	\setcounter{page}{1}
+
+
+	\section{Aim}
+	
+	To determine the Young’s modulus of a metal bar by flexure method.
+	
+	\section{Prerequisites}
+	
+	You must thoroughly read and understand the content of Appendix-I: Supplementary Reading.
+	
+	\section{Apparatus}
+	
+	\begin{itemize}
+		\item Metal Bar
+		\item Knife-edge Support
+		\item Weight Hanger
+		\item Different Weights
+		\item Metre Scale
+		\item Screw Gauge
+		\item Vernier Callipers
+		\item Travelling Microscope
+	\end{itemize} 
+
+	\section{Principle and Working Formula}
+	
+	\subsection{Elasticity }The ability of a body to deform in response to applied forces and to recover its original shape when the forces are removed.
+	
+	\subsection{Stress }The restoring force per unit area of the material.
+	
+	\subsection{Strain }The amount of deformation experienced by the body in the direction of force applied, divided by the initial dimensions of the body.
+	
+	\subsection{The Stress-Strain Curve }
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.6]{Stress_Strain}
+		\caption{The Stress-Strain Curve depicting different sections of the graph}
+		\label{figure:curve}
+	\end{figure}
+
+	\subsection{Explanation of the Stress-Strain Curve }
+	
+	(i) Proportional Limit: 
+	It is the region in the stress-strain curve that obeys Hooke’s Law. In this limit, the stress-strain ratio gives us a proportionality constant known as Young’s modulus. The point OA in the graph represents the proportional limit.
+	
+	(ii) Elastic Limit: 
+	It is the point in the graph up to which the material returns to its original position when the load acting on it is completely removed. Beyond this limit, the material doesn’t return to its original position, and a plastic deformation starts to appear in it.
+	
+	(iii) Yield Point: 
+	The yield point is defined as the point at which the material starts to deform plastically. After the yield point is passed, permanent plastic deformation occurs. There are two yield points (i) upper yield point (ii) lower yield point.
+	
+	(iv) Ultimate Stress Point: 
+	It is a point that represents the maximum stress that a material can endure before failure. Beyond this point, failure occurs.
+	
+	(v) Fracture or Breaking Point: 
+	It is the point in the stress-strain curve at which the failure of the material takes place.
+	
+	\subsection{The different moduli to consider during the experiment }
+	
+	Y = Young’s modulus, K = Bulk modulus,$\eta$ = Rigidity modulus, 
+	and $\sigma$ = Poisson’s ratio.
+	
+	\subsection{The relation between various moduli }
+	\begin{center}
+			\boxed{$$Y = 3K(1-2\sigma) = 2\eta(1+\sigma) = \frac{9K\eta}{3K+\eta}$$}
+	\end{center}
+
+	
+	\subsection{The actual working of the experiment }
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.6]{exp}
+		\caption{The schematic diagram of the experiment}
+		\label{figure:exp}
+	\end{figure}
+
+	A metal bar is kept horizontal with two knife-edge support at the two ends. When different 
+	suitable weight is hanged at the middle point of the bar it gets depressed (Fig. \ref{figure:exp}). The amount of depression $d$ is related to the 
+	Young’s modulus $Y$ of the bar material. By experimentally measuring
+	length, breadth and thickness of the bar and depression $d$ for different 
+	weights $W$ Young’s modulus $Y$ can be determined. 
+	The bar in Fig. \ref{figure:exp} can be regarded as two cantilevers, each of length $\frac{L}{2}$, 
+	fixed at the center (where weight is hanged) and loaded by $\frac{W}{2}$ at the 
+	two knife-edges. Each cantilever undergoes depression $d$ given by
+	\begin{align}
+		d&= \dfrac{WL^{3}}{4Ybt^{3}} = \dfrac{mgL^{3}}{4Ybt^{3}}\\
+		\Rightarrow d&= \dfrac{mgL^{3}}{4bdt^{3}}
+	\end{align}
+	Actually, it is difficult to know the absolute value of depression, because, even without any additional weight, the bar will be 
+	depressed slightly due to its own weight. So, one measures relative depression as a function of added weights and plots a graph: 
+	$d$ vs. $m$, which is a straight line with a slope,
+	\begin{align}
+		s&= \dfrac{gL^{3}}{4Ybt^{3}}
+	\end{align} 
+	From the slope $s$ of the $d$ vs. $m$ graph one can calculate Young’s 
+	modulus as,
+	\begin{align}
+		Y&=\dfrac{gL^{3}}{4sbt^{3}}
+	\end{align}
+
+	\begin{table}[H]
+		\centering
+		\def\arraystretch{1.5}
+		\caption{Symbols used in this experiment}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Symbol&Explanation&Unit\\
+			\hline
+			\hline
+			Y&Young's Modulus of the material of the beam&$\dfrac{N}{m^{2}}$\\
+			\hline
+			M&Load Applied&kg\\
+			\hline
+			L&Distance between knife edges&m\\
+			\hline
+			g&Acceleration due to gravity&$\dfrac{m}{s^{2}}$\\
+			\hline
+			b&Breadth of beam&m\\
+			\hline
+			t&Thickness of beam&m\\
+			\hline
+			s&Depression produced for `M' kg load&m\\
+			\hline
+			
+		\end{tabular}
+		\label{tab:symbols}
+	\end{table}
+	
+	\section{Procedure}
+	
+	1. Measure the breadth ($b$) of the bar using a Vernier 
+	caliper and tabulate the data. \\[10pt]
+	2. Measure the thickness ($t$) of the bar using a screw 
+	gauge and tabulate the data.\\ [10pt]
+	3. Measure the length ($L$) of bar between two knife-edges i.e., separation between two knife-edges (Fig. \ref{figure:exp}) using a meter scale 
+	and tabulate the data. \\[10pt]
+	4. Mark the point on the bar exactly at the center of the two knife-edges. Put the hanger of the weights exactly at that point. 
+	The hanger has pointer on top. \\[10pt]
+	5. Focus the travelling microscope such that the pointer is clearly seen in it. Position the travelling microscope such that the
+	pointer is touching the horizontal cross wire. Note down the reading of the vertical scale of the travelling microscope.\\[10pt]
+	6. Add one weight block on the hanger. [Mass of all the weight blocks should be already written on them. If it is missing, weigh 
+	the block and write it down.] The bar will depress and the pointer will move in the microscope field of view. Adjust microscope vertical position to align the pointer back to the horizontal cross wire. Note the reading of the vertical scale of 
+	the travelling microscope. \\[10pt]
+	7. Similarly, note microscope reading for addition of 4-5 more weight blocks one after another. \\[10pt]
+	8. Then start reducing the weight one by one and each time adjust microscope to align the pointer at the horizontal cross wire 
+	and take microscope reading till the hanger is empty again.\\[10pt] 
+	9. Record data for steps 5-8 in a table. Calculate average depression $d$ for a given amount of mass $m$ on the hanger.\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.7]{fig2}
+		\caption{Photograph of experimental setup.}
+		\label{figure:photo}
+	\end{figure}
+
+	\pagebreak
+
+	\section{Observed Data}
+	
+	The	length	of	the	steel	bar	between	two	knife	edges	=	86	cm\\
+	Least	count	of	the	screw	gauge	=	0.001cm\\
+	Vernier	constant	=	0.002cm\\
+
+	\begin{table}[H]
+		\centering
+		\def\arraystretch{1.5}
+		\caption{	Table	for	detrmination	of	breadth	of	the	bar	using	Vernier	Callipers}
+		\begin{tabular}{|c||c|c|c|p{4cm}|c|}
+			\hline
+			Sl. No.&MSR(cm)&VSR(cm)&VC(cm)&Breadth $[MSR+(VSR\times VC)]$(cm)&Average Breadth(cm)\\
+			\hline
+			\hline
+			1&2.5&40&0.002&2.58&\cellcolor{red!50}\\
+			\hline
+			2&2.5&16&0.002&2.532& \cellcolor{red!50}\color{black}{2.55}\\
+			\hline
+			3&2.5&25&0.002&2.55&\cellcolor{red!50}\\
+			\hline
+		\end{tabular}
+		\label{tab:VC}
+	\end{table}
+
+		\begin{table}[H]
+		\centering
+		\def\arraystretch{1.5}
+		\caption{Table	for	determination	of	thickness	of	the	bar	using	screw	gauge}
+		\begin{tabular}{|c||c|c|c|p{4cm}|c|}
+			\hline
+			Sl. No.&LSR(mm)&CSR&LC(mm)&Thickness of the bar $[LSR	+	(CSR	\times	LC)]$(mm)&Average Thickness(mm)\\
+			\hline
+			\hline
+			1&4.5&41&0.01&4.91&\cellcolor{green!50}\\
+			\hline
+			2&4.5&36&0.01&4.86&\cellcolor{green!50}\color{black}{4.88}\\
+			\hline
+			3&4.5&38&0.01&4.88&\cellcolor{green!50}\\
+			\hline
+		\end{tabular}
+		\label{tab:SG}
+	\end{table}
+
+			\begin{table}[H]
+		\centering
+		\def\arraystretch{1.5}
+		\caption{Table	for	Measuring	Depression	for	both	Loading	and	Unloading	mass }
+		\begin{tabular}{|p{0.3in}||p{0.6in}|p{0.3in}|c|p{0.4in}|p{0.6in}|p{0.3in}|c|p{0.4in}|p{0.8in}|c|}
+			\hline
+			Sl. No.&Mass on hanger(g)&\multicolumn{3}{|c|}{Loading}&Depression ($d_{1}$)(mm)&\multicolumn{3}{|c|}{Unloading}&Depression ($d_{2}$)(mm)&$d = \frac{d_{1}+d_{2}}{2}$(mm)\\
+			\hline
+			&&MSR (mm)&VSR&$x_{1}$ (mm)&&MSR (mm)&VSR&$x_{2}$ (mm)&&\\
+			\hline
+			\hline
+			1&0&113&20&113.20&0&112.5&40&112.90&0&0\\
+			\hline
+			2&426&112&33&112.33&0.9&112&5&112.05&0.9&0.9\\
+			\hline
+			3&908&110.5&25&110.75&2.5&110.5&15&110.65&2.3&2.4\\
+			\hline
+			4&1393&109&10&109.10&4.1&109&23&109.23&3.7&3.9\\
+			\hline
+			5&1883&108&5&108.05&5.2&107.5&30&107.80&5.1&5.1\\
+			\hline
+			6&2843&105&38&105.38&7.8&105&30&105.30&7.6&7.7\\
+			\hline
+		\end{tabular}
+		(Vernier Constant = 0.01mm)
+		\label{tab:final}
+	\end{table}
+
+	\section{Calculations}
+	\label{sec:calc}
+	
+	\subsection{$d\ vs.\ m$ Graph}
+	The graph for Depression (d) vs. Mass (m) is as follows:-
+		
+		\begin{figure}[H]
+			\centering
+			\fbox{\includegraphics[scale=1]{Graphx}}
+			\caption{The graph for $d\ vs.\ m$}
+			\label{figure:graph}
+		\end{figure}
+	
+	\pagebreak
+	
+	\subsection{Curve-Fitting Algorithm/Code}
+	
+	The graph was drawn using the MatPlotLib, SciPy, and NumPy packages of Python.
+	The curve fitting code (algorithm) used was :-\\[10pt]
+	
+	\begin{lstlisting}
+		import matplotlib.pyplot as plt
+		plt.style.use(['science', 'notebook', 'grid'])
+		import numpy as np
+		from scipy.optimize import curve_fit
+		from matplotlib import pyplot
+		
+		x = [0, 426, 908, 1393, 1883, 2843]
+		y = [113.05, 112.19, 110.70, 109.17, 107.93, 105.34]
+		plt.figure(dpi=500)
+		# define the true objective function
+		def objective(x, a, b):
+			return a * x + b
+		# curve fit
+		popt, _ = curve_fit(objective, x, y)
+		# summarize the parameter values
+		a, b = popt
+		print('y = %.5f * x + %.5f' % (a, b))
+		# plot input vs output
+		pyplot.scatter(x, y, label='Experimental Data')
+		# define a sequence of inputs between the smallest and largest known inputs
+		x_line = np.arange(min(x), max(x), 1)
+		# calculate the output for the range
+		y_line = objective(x_line, a, b)
+		# create a line plot for the mapping function
+		pyplot.plot(x_line, y_line, '--', label='Best Fit Curve', color='red')
+		plt.xlabel('Mass(g)')
+		plt.ylabel('Depression(mm)')
+		plt.legend()
+		plt.savefig('Graphx.png')
+		pyplot.show()
+	\end{lstlisting}
+	
+	This code resulted in a one degree polynomial as the best fit curve. The polynomial that it generated was:-
+	$$y = 0.00277  x - 0.08847$$
+	So, it is visible from here that the slope of the line is, $$|s| = 0.00277\ mmg^{-1}$$.
+	
+	\pagebreak
+	
+	\subsection{Final Results}
+	
+	So, now we have:
+	\begin{itemize}
+		\item $L = 86cm = 0.86m$
+		\item $g = 9.8ms^{-2}$
+		\item $b = 2.55cm = 0.0255m$
+		\item $t = 4.88mm = 0.00488mm$
+		\item $s = 0.00277mmg^{-1} = 0.00277mkg^{-1}$
+	\end{itemize}
+
+	Therefore, on substituting the above values in the formula,
+	$$Y=\dfrac{gL^{3}}{4sbt^{3}}$$
+	one gets,
+	$$\Rightarrow Y = \dfrac{9.8 \times 0.86^{3}}{4 \times 0.00277 \times 0.0255 \times 0.00488^{3}} Nm^{-2}$$
+	$$\Rightarrow Y = 1.898375073 \times 10^{11}Nm^{-2} \approxeq 1.89 \times 10^{11} Nm^{-2}$$
+	
+	\section{Error Analysis}
+	\label{sec:error}
+	
+	Literature Value of Young's Modulus of Steel = $200 \times 10^{9}Nm^{-2}$\\ (source: \href{https://byjus.com/physics/youngs-modulus-elastic-modulus/}{\color{purple}{Click Here!}} )\\
+	Experimental Value of Young's Modulus of Steel = $1.89 \times 10^{11} Nm^{-2} = 189 \times 10^{9}Nm^{-2}$\\ (source: \hyperref[sec:calc]{\color{purple}Check Here!})\\
+	
+	Therefore, error is,
+	$$\Delta Y = 200 \times 10^{9}Nm^{-2} - 189 \times 10^{9}Nm^{-2}$$
+	$$\Rightarrow \Delta Y = 11 \times 10^{9}Nm^{-2}$$
+	
+	\pagebreak
+	
+	Percentage Error is,
+	$$\Delta Y \% = \dfrac{11 \times 10^{9}}{200 \times 10^{9}} \times 100 \%$$
+	$$\Rightarrow \Delta Y = 5.5 \%$$
+	which is within the accepted range.
+	
+	\section{Conclusion}
+	
+	In this experiment, we learned how to experimentally calculate the Young's modulus for a material, when it is shaped in the form of a long bar. Also, we learned the theoretical aspect of how the formula for Young's modulus for a material is derived. I enjoyed plotting the data points and performing the curve fitting.
+	
+	\section{Acknowledgements}
+	
+	\begin{itemize}
+		\item Creators of SciPy, NumPy, and MatPlotLib for providing the said packages.
+		\item \url{https://byjus.com/physics/youngs-modulus-elastic-modulus/} for providing the literature value of Young's Modulus of Steel.
+		\item \href{mailto:dhananjay@iiserkol.ac.in}{\color{purple}Prof. Dhananjay Nandi} for allowing us to view this experiment and create this lab report.
+	\end{itemize}
+
+\end{document}
