@@ -3,7 +3,7 @@
 \Newassociation{sketch}{hintitem}{hints}
 \renewcommand{\solutionextension}{out}
 \usepackage[none]{hyphenat}
-\usepackage[margin=1in]{geometry}
+%\usepackage[margin=1in]{geometry}
 
 \usepackage[sexy]{evan}
 \newcommand\EE{\mathbb E}
@@ -96,7 +96,49 @@
 	\end{theorem}
 
 	\begin{proof}
+		Let $S$ be the set of those natural numbers for which the statement $P(n)$ is true.
 		
+		Then $S$ has the properties,
+		\begin{enumerate}[(a)]
+			\item $1 \in S$, by (i)
+			\item $k \in S \Rightarrow k+1 \in S$ by (ii).
+		\end{enumerate}
+	
+		By the \emph{Principle of Induction}, $S = \NN$.
+		
+		Therefore, $P(n)$ is true for all $n \in \NN$.
 	\end{proof}
+
+	\begin{remark}
+		Let a statement $P(n)$ satisfies the conditions,
+		\begin{enumerate}[(i)]
+			\item for some $m \in \NN,\ P(m)$ is true ($m$ being the least possible); and
+			\item $P(k)$ is true $\Rightarrow$ $P(k+1)$ is true for all $k \geq m$.
+		\end{enumerate}
+		Then $P(n)$ is true for all natural numbers $\geq m$.
+	\end{remark}
+
+	\pagebreak
+
+	\begin{flushleft}
+			\textbf{Worked Examples}
+	\end{flushleft}
+	\begin{example}
+		Prove that for each $n \in \NN$, $1+2+3+4+\dots +n = \frac{n(n+1)}{2}$ for all $n \in \NN$.
+	\end{example}
+
+	The statement is true for $n=1$, because $1 = \frac{1(1+1)}{2}$.\\
+	Let the statement be true for some natural number $k$.\\
+	Then $1+2+3+4+\dots +k = \frac{(k+1)}{2}$ and therefore,\\
+	$(1+2+\dots+k)+(k+1) = \frac{k(k+1)}{2} + (k+1)$\\
+	or, $1 +2 +3 + \dots +(k+1) = \frac{(k+1)(k+2)}{2}$.
+	
+	This shows that the statement is true for the natural number $k+1$ if it is true for k. By the principle of induction, the statement is true for all natural numbers.
+	
+	\begin{example}
+		Prove that for each $n \geq 2,\ (n+1)! > 2^{n}$.
+	\end{example}
+
+	
 \end{document}
 
