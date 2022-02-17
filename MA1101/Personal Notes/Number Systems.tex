@@ -63,7 +63,7 @@
 	\subsection{Principle of Induction}
 	\begin{definition}
 		Let $S$ be a subset of $\NN$ such that,
-		\begin{enumerate}
+		\begin{enumerate}[i)]
 			\item  $1 \in S$ and,
 			\item  if $k \in S$, then $k+1 \in S$.
 		\end{enumerate}
@@ -75,8 +75,28 @@
 		
 		Let $T$ be non-empty. then by the \emph{Well Ordering Property} of $\NN$, the non-empty subset $T$ has a least element, say $m$.
 		
+		Since $1 \in S$ and $1$ is the least element of $\NN$, $m>1$.
 		
+		Hence, $m-1$ is a natural number and $m-1 \notin T$. So, $m-1 \in S$.
+		
+		But by ii) $m-1 \in S \Rightarrow (m-1)+1 \in S$, i.e., $m \in S$.
+		
+		This contradicts that $m$ is the least element in $T$. Therefore, our assumption is wrong and $T = \phi$.
+		
+		Therefore, $S=\NN$.
 	\end{proof}
 		 
+	\begin{theorem}
+		Let $P(n)$ be a statement involving a natural number $n$. If,
+		\begin{enumerate}[i)]
+			\item $P(1)$ is true, and
+			\item $P(k+1)$ is true whenever $P(k)$ is true,
+		\end{enumerate}
+		then $P(n)$ is true for all $n \in \NN$.
+	\end{theorem}
+
+	\begin{proof}
+		
+	\end{proof}
 \end{document}
 
