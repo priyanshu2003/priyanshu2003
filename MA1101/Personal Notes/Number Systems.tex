@@ -1,0 +1,82 @@
+\documentclass[11pt]{scrartcl}
+\usepackage{answers}
+\Newassociation{sketch}{hintitem}{hints}
+\renewcommand{\solutionextension}{out}
+\usepackage[none]{hyphenat}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[sexy]{evan}
+\newcommand\EE{\mathbb E}
+\newcommand\PP{\mathbb P}
+%\setlength{\parindent}{0em}
+%\setlength{\parskip}{2.5em}
+
+\begin{document}
+	\title{Module 2: Number Systems}
+	\author{Priyanshu Mahato}
+	\date{\today}
+	\maketitle
+	
+	\begin{abstract}
+		Email: \mailto{pm21ms002@iiserkol.ac.in}.These are my personal notes on Number Systems. We will consider $\mathbb{N}$ (Natural Numbers), $\mathbb{Z}$ (Integers), and $\mathbb{Q}$ (rational Numbers), but not $\mathbb{R}$ (Real Numbers).
+	\end{abstract}
+
+	\section{Natural Numbers}
+	
+		The natural numbers are $1,2,3,4,\dots$. The set of all natural numbers is denoted by $\NN$.
+		
+		\begin{definition}
+			We assume familiarity with the algebraic operations of addition and multiplication on the set $\NN$ and also with the linear order relation $<$ on $\NN$ defined by ``$a<b$ if $a, b \in \NN$ and $a$ is less than $b$".
+		\end{definition}
+	
+		We discuss the following fundamental properties of the set $\NN$.
+		
+		\begin{enumerate}
+			\item Well Ordering Property
+			\item  Principle of Induction
+		\end{enumerate}
+	
+	\subsection{Well Ordering Property}
+		\begin{definition}
+			Every non-empty subset of $\NN$ has a least element.
+		\end{definition}
+		This means that if $S$ is a non-empty subset of $\NN$, then there is an element $m$ in $S$ such that $m \leq s$ for all $s \in S$.
+		
+		In particular, $\NN$ itself has the least element 1.
+		
+		\begin{proof}
+			Let $S$ be a non-empty subset of $\NN$. Let $k$ be an element of $S$. Then $k$ is a natural number.
+			
+			We define a subset $T$ by $T = \left\{ x \in S : x \leq k \right\}$. The $T$ is a non-empty subset of $\left\{ 1,2,3,\dots, k \right\}$.
+			
+			Clearly, $T$ is a finite subset of $\NN$ and therefore it has a least element, say $m$. Then $1 \leq m \leq k$.
+			
+			We now show that $m$ is the least element of $S$. Let $s$ be any element of $S$.
+			
+			If $s>k$, then the inequality $m \leq k$ implies $m<s$.
+			
+			If $s \leq k$, the $s \in T$; and $m$ being the least element of $T$, we have $m \leq s$.
+			
+			Thus $m$ is the least element of $S$.
+		\end{proof}
+	
+	\subsection{Principle of Induction}
+	\begin{definition}
+		Let $S$ be a subset of $\NN$ such that,
+		\begin{enumerate}
+			\item  $1 \in S$ and,
+			\item  if $k \in S$, then $k+1 \in S$.
+		\end{enumerate}
+	Then $S = \NN$
+	\end{definition}
+	
+	\begin{proof}
+		Let $T = \NN - S$. We prove that $T = \phi$.
+		
+		Let $T$ be non-empty. then by the \emph{Well Ordering Property} of $\NN$, the non-empty subset $T$ has a least element, say $m$.
+		
+		
+	\end{proof}
+		 
+\end{document}
+
