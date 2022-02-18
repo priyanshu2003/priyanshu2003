@@ -127,11 +127,11 @@
 		Prove that for each $n \in \NN$, $1+2+3+4+\dots +n = \frac{n(n+1)}{2}$ for all $n \in \NN$.
 	\end{example}
 
-	The statement is true for $n=1$, because $1 = \frac{1(1+1)}{2}$.\\
+	The statement is true for $n=1$, because $1 = \dfrac{1(1+1)}{2}$.\\
 	Let the statement be true for some natural number $k$.\\
-	Then $1+2+3+4+\dots +k = \frac{(k+1)}{2}$ and therefore,\\
-	$(1+2+\dots+k)+(k+1) = \frac{k(k+1)}{2} + (k+1)$\\
-	or, $1 +2 +3 + \dots +(k+1) = \frac{(k+1)(k+2)}{2}$.
+	Then $1+2+3+4+\dots +k = \dfrac{(k+1)}{2}$ and therefore,\\
+	$(1+2+\dots+k)+(k+1) = \dfrac{k(k+1)}{2} + (k+1)$\\
+	or, $1 +2 +3 + \dots +(k+1) = \dfrac{(k+1)(k+2)}{2}$.
 	
 	This shows that the statement is true for the natural number $k+1$ if it is true for k. By the principle of induction, the statement is true for all natural numbers.
 	
@@ -139,6 +139,35 @@
 		Prove that for each $n \geq 2,\ (n+1)! > 2^{n}$.
 	\end{example}
 
+	The equality holds for $n=2$ since $(2+1)! > 2^{2}$.
 	
+	Let the inequality hold for some natural number $k \geq 2$.
+	
+	Then, $(k+1)! > 2^{k}$
+	\begin{align*}
+		and\ (k+2)! &= (k+2)(k+1)!\\
+		&> 2 \cdot 2^{k}, since\ k+2>2\\
+		or,\ (k+2)! &> 2^{k+1}
+	\end{align*}
+
+	This shows that if the inequality holds for $k(\geq 2)$ then it also holds for $k+1$.
+	
+	By the principle of induction, the inequality holds for all natural numbers $\geq 2$.
+	
+	[Note that the inequality does not hold for $n=1$.]
+	
+	\subsection{Second Principle of Induction (or, Principle of Strong Induction)}
+	\begin{definition}
+		Let $S$ be a subset of $\NN$ such that
+		\begin{enumerate}[(i)]
+			\item $1 \in S$, and
+			\item if $\{1,2,3,4,\dots\} \subset S$, then $k+1 \in S$.
+		\end{enumerate}
+		Then $S = \NN$
+	\end{definition}
+
+	\begin{proof}
+		
+	\end{proof}
 \end{document}
 
