@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.3)  18 FEB 2022 15:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.3)  19 FEB 2022 11:42
 entering extended mode
 **"./Number Systems.tex"
 (Number Systems.tex
@@ -1248,16 +1248,20 @@ t line 127.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 139.
- [3] (Number Systems.aux)
+ [3]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 188.
+ [4] (Number Systems.aux)
 Package rerunfilecheck Info: File `"Number Systems".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33725 strings out of 478927
- 652999 string characters out of 2862392
- 1161206 words of memory out of 3000000
- 50876 multiletter control sequences out of 15000+600000
- 419243 words of font info for 124 fonts, out of 8000000 for 9000
+ 33734 strings out of 478927
+ 653108 string characters out of 2862392
+ 1161253 words of memory out of 3000000
+ 50878 multiletter control sequences out of 15000+600000
+ 419345 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  123i,20n,128p,10633b,1123s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\priya\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx
@@ -1271,12 +1275,13 @@ fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8
 .pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Progr
 am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb>
-Output written on "Number Systems.pdf" (3 pages, 178321 bytes).
+type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on "Number Systems.pdf" (4 pages, 192117 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
+ 163 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
  41517 words of extra memory for PDF output out of 42996 (max. 10000000)
 

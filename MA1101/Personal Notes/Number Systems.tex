@@ -167,7 +167,42 @@
 	\end{definition}
 
 	\begin{proof}
+		Let $T = \NN - S$. We prove that $T = \phi$.
 		
+		Let $T$ be non-empty. Then $T$ will have a least element, say $m$, by the WOP of $\NN$. Since, $1 \in S,\ 1 \notin T$.
+		
+		As $m$ is the least element in $T$ and $1 \notin T$, $m>1$.
+		
+		By choice of $m$, all natural numbers less than $m$ belong to $S$. That is $1,2,\dots, m-1$ all belong to $S$.
+		
+		Then by (ii) $m \in S$ and consequently, $m \notin T$, a contradiction. It follows that $T = \phi$ and therefore, $S=\NN$.
 	\end{proof}
+
+\pagebreak
+
+	\begin{flushleft}
+			\textbf{Worked Examples}(continued)
+	\end{flushleft}
+	
+	\begin{example}
+		Prove that for all $n \in \NN$, $(3+\sqrt{5})^{n} + (3-\sqrt{5})^{n}$ is an even integer.
+	\end{example}
+	Let $P(n)$ be the statement ``$(3+\sqrt{5})^{n} + (3-\sqrt{5})^{n}$ is an even integer".
+	
+	$P(1)$ is true since $(3+\sqrt{5})^{1} + (3-\sqrt{5})^{1} = 6$, an even integer.
+	
+	Let us assume that $P(n)$ is true for $n=1,2,\dots,k$.
+		\begin{align*}
+			&(3+\sqrt{5})^{(k+1)} + (3-\sqrt{5})^{(k+1)}\\
+			&= a^{(k+1)} + b^{(k+1)}\ where\ a=3+\sqrt{5},\ b=3-\sqrt{5}\\
+			&= (a^{k} + b^{k})(a+b) - (a^{k-1} + b^{k-1})ab\\
+			&= 6(a^{k} + b^{k}) - 4(a^{k-1} + b^{k-1}).		
+		\end{align*}
+	
+	It is an even integer, since $a^{k}+b^{k}$ and $a^{k-1}+b^{k-1}$ are even integers.
+	
+	Hence, $P(k+1)$ is true whenever $P(n)$ is true for all $n=1,2,\dots,k$.
+	
+	By the second principle of induction, $P(n)$ is true for all natural numbers.
 \end{document}
 
