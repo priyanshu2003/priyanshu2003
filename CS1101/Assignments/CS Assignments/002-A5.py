@@ -44,20 +44,22 @@ for i in range (min(x,y), max(x,y)):
 # Write a program which uses the above relation to evaluate $e^{\pi}$ to the accuracy of $10^{-4}$. 
 # Your program should print number of terms of the series (which have been evaluated), the computed value, the actual value and their absolute difference of the two.
 
-# In[19]:
+# In[11]:
 
 
 import math
 e = math.e
 pi = math.pi
 actual = e**pi
-S = 1
+S = 0
 term = 1
 counter = 0
-for i in range (1, 1000001):
-    term = (pi/i)*term
+n=1
+while round((abs(S - actual)),4)>0.0001:
     S = S + term
+    term = (pi/n)*term
     counter = counter + 1
+    n += 1
 print('Actual Value:', actual)
 print('Value using expansion:', S)
 print('No. of terms considered: ', counter)
@@ -66,30 +68,34 @@ print('Difference between the values:', abs(S-actual))
 
 # ## Question 3:
 
-# Use the above method (relation between successive terms) to estimate $\sin (\frac{\pi}{2})$ to theaccuracy of $10^{-4}$. Your program should print number of terms of the series (which have been evaluated), the computed value, the actual value and their absolute difference of the two. You can use the series expansion:
+# Use the above method (relation between successive terms) to estimate $\sin (\frac{\pi}{2})$ to the accuracy of $10^{-4}$. Your program should print number of terms of the series (which have been evaluated), the computed value, the actual value and their absolute difference of the two. You can use the series expansion:
 # $$\sin(x) = x-\dfrac{x^3}{3!}+\dfrac{x^5}{5!}-\dfrac{x^7}{7!}...
 # =\sum_{n=0}^{\infty} \dfrac{(-1)^n x^{2n+1}}{(2n+1)!}$$
 
-# In[42]:
+# In[13]:
 
 
 import math
-from decimal import Decimal
-from decimal import *
+pi = math.pi
+#sin(pi/2)=1
+def a_sin(x,n):
+    if n==0:
 
-p = math.pi/2
-actual = math.sin(p)
-S = 0
-term = 0
-counter = 0
-for i in range (1, 170, 2):
-    term = ((-1)**counter * p**i)/math.factorial(i)
-    S = S + term
-    counter += 1
-print('Actual Value:', actual)
-print('Value from series:', S)
-print('Difference between the two:', abs(S-actual))
-print('No. of iterations:', counter)
+        return x
+    else:
+        return -(x**2 * a_sin(x,n-1))/(4*n**2 + 2*n)
+
+epsilon=10**-4
+S=0
+n=0
+while(abs(1-S)>=epsilon):
+    S+=a_sin(pi/2,n)
+
+    n+=1
+print(f"Actual value = 1")
+print(f"Computed value = %s "%(S))
+print(f"Error = {abs(1-S)}")
+print(f"No of terms = {n}")
 
 
 # ## Question 4:
@@ -155,7 +161,7 @@ print('Answer:', res)
 # their absolute difference.
 # 
 
-# In[22]:
+# In[1]:
 
 
 import math
@@ -207,6 +213,12 @@ while(x):
         break
     i += 1
 print("\nThe function was executed on x,",i,"number of times, to reach less than 2 from 10.")
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
