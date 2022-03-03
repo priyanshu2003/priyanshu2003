@@ -206,5 +206,69 @@
 	By the second principle of induction, $P(n)$ is true for all natural numbers.
 	
 	\section{Integers}
+	
+	We shall now construct the set of integers using the set of Natural Numbers. Our construction will be through an equivalence relation on $\NN \times \NN$.
+	
+	\begin{definition}
+		Define $\sim_{\ZZ}$ on $\NN \times \NN$ by, for all $(m,n),(p,q) \in \NN \times \NN$,
+		 $$(m,n)\sim_{\ZZ}(p,q) \Leftrightarrow m+q = n+p$$
+	\end{definition}
+
+	\begin{lemma}
+		\begin{enumerate}[i)]
+			\item $\sim_{\ZZ}$ is an equivalence relation on $\NN \times \NN$.
+			\item for all $(m,n) \in \NN \times \NN$,
+				\[(m,n) \sim_{\ZZ}
+				\begin{cases*}
+					$(m+1-n, 1)$ & for $m\geq n$\\
+					$(1, n+1-m)$ & for $n\geq m$
+				\end{cases*}\]
+			\item $\NN \times \NN / \sim_{\ZZ} = \{[(j,1)] : j \in \NN\ \&\ j\geq 2\} \cup \{[(1,k)] : k \in \NN\ \&\ k\geq 2\} \cup \{[(1,1)]\}$
+		\end{enumerate}
+	\end{lemma}
+
+	\begin{proof}
+		Look at MA1101 ps2 (\textbf{Problem 2})
+	\end{proof}
+
+	\begin{definition}
+		Let us write $\ZZ \defeq \NN \times \NN / \sim_{\ZZ} = \{[(m,n)] : (m,n) \in \NN \times \NN\}$
+		
+		We also write,
+		$$\boxed{\overline{0} \defeq [(1,1)]\ \&\ \overline{1} \defeq [(2,1)]}$$
+		
+		Let $\overline{a} \defeq [(m,n)]$, $\overline{b} \defeq [(p,q)] \in \ZZ$.
+		\begin{enumerate}[i)]
+			\item \textbf{Addition}\\
+			$$\boxed{ a + b \defeq [(m+p, n+q)]}$$
+			\item \textbf{Multiplication}\\
+			$$\boxed{ a \cdot b \defeq [(mp+nq, mq+np)]}$$
+		\end{enumerate}
+	\end{definition}
+
+	We have the following important theorem,
+	
+	\begin{theorem}
+		\begin{enumerate}[i)]
+			\item $+$ is well-defined, commutative and associative
+			\item $a+\overline{0} = a = \overline{0} + a$, $\forall a \in \ZZ$
+			\item $\forall a \in \ZZ, \exists$ a unique $x \in \ZZ$, such that $a + x = \overline{0}$. We write $-a$ for $x$ and say that $-a$  is  the negative of $a$
+			\item $\forall a,b \in \ZZ, \exists$ a unique $x \in \ZZ$ such that $a+x = b$
+			\item $\cdot$ is well defined, associative, and commutative
+			\item $a\cdot\overline{1} = a = \overline{1}\cdot a$, $\forall a \in \ZZ$
+			\item $\forall a,b \in \ZZ$, $a\cdot (b+c) = a\cdot b + a\cdot c$
+		\end{enumerate}
+	\label{theorem:ring}
+	\end{theorem}
+
+	\begin{remark}
+		In other words, we can call $(\ZZ, +, \cdot)$ as a commutative \textbf{ring} with identity.
+	\end{remark}
+
+	To prove \ref{theorem:ring}, we start off with a lemma,
+	
+	\begin{lemma}
+		$\forall\ n,p,q \in \NN$, if $n+p = n+q$ $\Rightarrow p=q$
+	\end{lemma}
 \end{document}
 
