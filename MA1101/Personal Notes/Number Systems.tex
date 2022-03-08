@@ -244,6 +244,7 @@
 			\item \textbf{Multiplication}\\
 			$$\boxed{ a \cdot b \defeq [(mp+nq, mq+np)]}$$
 		\end{enumerate}
+	\label{definition:bar}
 	\end{definition}
 
 	We have the following important theorem,
@@ -256,7 +257,7 @@
 			\item $\forall a,b \in \ZZ, \exists$ a unique $x \in \ZZ$ such that $a+x = b$
 			\item $\cdot$ is well defined, associative, and commutative
 			\item $a\cdot\overline{1} = a = \overline{1}\cdot a$, $\forall a \in \ZZ$
-			\item $\forall a,b \in \ZZ$, $a\cdot (b+c) = a\cdot b + a\cdot c$
+			\item $\forall a,b,c \in \ZZ$, $a\cdot (b+c) = a\cdot b + a\cdot c$
 		\end{enumerate}
 	\label{theorem:ring}
 	\end{theorem}
@@ -269,6 +270,254 @@
 	
 	\begin{lemma}
 		$\forall\ n,p,q \in \NN$, if $n+p = n+q$ $\Rightarrow p=q$
+		\label{lemma:npq}
 	\end{lemma}
+
+	\begin{proof}
+		We prove using Induction on $n$. When $n=1$, $S(p) = 1+p = 1+q = S(q)$. As $S$ is one-one (injective), it follows that $p=q$. Let us suppose that for some $k \in \NN$, $k+p = k+q$. Hence, $(k+1)+p = 1+(k+p) = 1+(k+q) = (k+1)+q$, i.e., the result holds when $n=k+1$. Therefore, the result is proved using Induction.
+	\end{proof}
+
+	We are now ready to prove Theorem \ref{theorem:ring},
+	
+	\begin{proof}
+		i) We first check that $+$ is well-defined. Let $a = [(m,n)] = [(m',n')]$, $b = [(p,q)] = [(p',q')]$. We have to show that,
+		$[(m+p, n+q)] = [(m'+p', n'+q')]$ \hfill(*)\\
+		Indeed, as $[(m,n)] = [(m',n')]$, we have $m+n' = n+m'$.\\
+		Similarly, $p+q' = q+p'$.\\
+		\begin{align*}
+			&m+n'+p+q' = n+m'+q+p'\\
+			\Rightarrow&(m+p)+(n'+q') = (n+q)+(m'+p')\\
+			\Rightarrow&(m+p, n+q) \sim_{\ZZ} (m'+p', n'+q')\\
+			\Rightarrow&[(m+p, n+q)] = [(m'+p', n'+q')],\\ 
+		\end{align*}
+		which proves (*). Hence, $+$ is well-defined.
+	\end{proof}
+
+	We now check the associativity of $+$.Let $a,b,c \in \ZZ$ be written as, $a = [(m,n)], b = [(p,q)], c = [(r,s)]$.\\
+	Then,\\
+	\begin{align*}
+		(a+b)+c &= ([(m,n)]+[p,q])+[(r,s)]\\
+		&= [(m+p, n+q)]+[(r,s)]\\
+		&= [((m+p)+r, (n+q)+s)]\\
+		&= [(m+(p+r), n+(q+s))]\\
+		&= a+(b+c)
+	\end{align*}
+ 	which shows that $+$ is associative.
+ 	
+ 	Now, we show that $+$ is commutative.
+ 	Let  $a,b \in \ZZ$ be written as, $a = [(m,n)], b = [(p,q)]$.\\
+ 	Then,\\
+ 	\begin{align*}
+ 		a+b &= [(m,n)]+[(p,q)]\\
+ 		&= [(m+p, n+q)]\\
+ 		&= [(p+m, q+n)]\\
+ 		&= b+a
+ 	\end{align*}
+ 	which shows that $+$ is commutative.
+ 	
+ 	ii) Let $a \in \ZZ$ be written as, $a = [(m,n)]$. Then,\\
+ 	\begin{align*}
+ 		a+\overline{0} &= [(m,n)]+[(1,1)]\\
+ 		&= \underbrace{[(m+1, n+1)] = [(m,n)]}\\
+ 		&= \overline{a}
+ 	\end{align*}
+ 	as, $(m+1, n+1) \sim_{\ZZ} (m,n)$. Also, we have earlier proved the commutativity of $+$ over $\ZZ$. Therefore, we have proved that,
+ 	$$a+\overline{0} = \overline{a} = \overline{0}+a, \forall\ a \in \ZZ$$
+ 	
+ 	iii) Let $a \in \ZZ$ be written as, $a = [(m,n)]$. We define $x \in \ZZ$ as, $x \defeq [(n,m)]$.\\
+ 	Then,\\
+ 	\begin{align*}
+ 		a+x &= [(m,n)]+[(n,m)]\\
+ 		&= [(m+n, n+m)]\\
+ 		&= [(m+n, m+n)]\\
+ 		&= [(1,1)]\\
+ 		&= \overline{0}
+ 	\end{align*}
+ 
+ 	We now prove the uniqueness of $x$. Let us suppose that $\exists\ x,y \in \ZZ$, such that,\\
+ 	\begin{center}
+ 		$a+x = x+a = \overline{0}$, and $a+y = y+a = \overline{0}$\\
+ 	\end{center}
+ 	We now show that $x=y$. Indeed, using ii),\\
+ 	$x = \overline{0} + x = (y+a) +x = y+(a+x) = y+\overline{0} = y $, which proves the uniqueness.\\[9pt]
+ 	
+ 	iv) Let $a,b \in \ZZ$ be given.We must define $x = (-a)+b$.\\
+ 	Then,
+ 		$$a+x = a+((-a)+b) = (a+(-a))+b = \overline{0}+b = b$$
+ 		
+ 	We now prove the  uniqueness of $x$. Let there be $a,b \in \ZZ$. We must define $x,y \in \ZZ$ as $x = (-a)+b$ and $y = (-a)+b$. Then,\\
+ 	\begin{center}
+ 		$a+x = a+((-a)+b) = (a+(-a))+b = 0+b = (a+(-a))+b = a+((-a)+b) = a+y$
+ 	\end{center}
+ 	This shows that $x=y$, which in turn proves the uniqueness of $x$.\\[10pt]
+ 	
+ 	We now establish the properties of multiplication on $\ZZ$.\\[10pt]
+ 	
+ 	v) We prove that multiplication on $\ZZ$ is well-defined. Let $a,b \in \ZZ$ be defined as, $a = [(m,n)] = [(m',n')]$ and $b = [(p,q)] = [(p',q')]$.
+ 	
+ 	We shall show that,
+ 	\begin{align*}
+ 		[(m,n)][(p,q)] &=  [(m',n')][(p',q')]\\
+ 		\Rightarrow[(mp+nq, mq+np)] &= [(m'p'+n'q', m'q'+n'p')]\\ 
+ 	\end{align*}
+ 	$$\Rightarrow \boxed{mp+nq+m'q'+n'p' = m'p'+n'q'+mq+np}\\$$
+ 	
+ 	To prove this, we proceed as follows. We have,\\
+ 	\begin{align}
+ 		m+n' = m'+n\\
+ 		p+q' = q+p'
+ 	\end{align}
+ 	\begin{flushleft}
+ 	$(1) \times p$ $\Rightarrow mp+n'p = m'p+np$\\
+ 	$(1) \times q$ $\Rightarrow mq+n'q = m'q+nq$\\
+ 	$(2) \times m'$ $\Rightarrow pm'+q'm' = qm'+p'm'$\\
+ 	$(2) \times n'$ $\Rightarrow pn'+q'n' = qn'+p'n'$\\
+ 	\end{flushleft}
+ 	This implies that,
+ 	\begin{align*}
+ 		mp+n'p+m'q+nq+pm'+q'm'+qn'+p'n' &= m'p+np+mq+n'q+qm'+p'm'+pn'+q'n'\\
+ 		(mp+nq+m'q'+n'p')+[n'p+m'q+m'p+n'q] &= (mq+np+m'p'+n'q')+[n'p+m'q+m'p+n'q]
+ 	\end{align*}
+ 
+ 	Now, invoking \texttt{Lemma \ref{lemma:npq}}, we conclude that,
+ 	$$mp+nq+m'q'+n'p' = mq+np+m'p'+n'q'$$
+ 	which proves our assumption. Hence, the multiplication is well-defined on $\ZZ$. This proves \texttt{(v)} and \texttt{(vi)}.\\[10pt]
+ 	
+ 	(vii) We prove that $\forall a,b,c \in \ZZ$, $a\cdot (b+c) = a\cdot b + a\cdot c$. Let $a,b,c \in \ZZ$ be defined as, $a = [(m,n)]$, $b = [(p,q)]$, and $c = [(r,s)]$.
+ 	
+ 	Now, we can say,
+ 	\begin{align*}
+ 		a \cdot (b+c) &= [(m,n)]\cdot ([(p,q)] + [(r,s)])\\
+ 		&= [(m,n)]\cdot[(p+r, s+q)]\\
+ 		&= [(mp+mr+ns+nq, ms+mq+np+nr)]\\
+ 		ab+ac &= [(m,n)][(p,q)]+[(m,n)][(r,s)]\\
+ 		&= [(mp+nq, mq+np)]+[(mr+ns, ms+nr)]\\
+ 		&= [(mp+nq+mr+ns, mq+np+ms+nr)]
+ 	\end{align*}
+ 
+	Since, $a \cdot (b+c) = [(mp+mr+ns+nq, ms+mq+np+nr)] = [(mp+nq+mr+ns, mq+np+ms+nr)] = ab+ac$, we have proved the claim that,
+	$$\forall\ a,b,c \in \ZZ,\ a\cdot (b+c) = a\cdot b + a\cdot c$$
+	
+	\begin{center}
+		\texttt{This completes the proof for Theorem \ref{theorem:ring}.}
+	\end{center}
+
+	Before we proceed further, let's introduce the following notation.\\[10pt]
+	\textbf{\underline{Notation: }}\\
+	We write,
+	$$\boxed{\ZZ^{+} \defeq \{[(j,1)]: j \in \NN, j\geq 2\}}$$
+	
+	\begin{theorem}
+		\texttt{\textbf{Embedding of $\NN$: }}\\
+		Define $f:\NN \mapsto \ZZ$ by,
+		$$\boxed{f(n) \defeq [(n+1,1)] \forall\ n \in \NN}$$
+		Then $f$ satisfies the following properties:
+		\begin{enumerate}[i)]
+			\item $f$ is one-one(injective),
+			\item $f(\NN) = \ZZ^{+}$,
+			\item $f(1) = \overline{1}$,
+			\item $\forall\ m,n \in \NN$, $$f(m+n)= f(m)+f(n),\ f(mn) = f(m)\cdot f(n)$$
+		\end{enumerate}
+	\label{theorem:embed}
+	\end{theorem}
+	\begin{proof}
+		\begin{enumerate}[i)]
+			\item Let there be $x,y \in \NN$ such that $f(x)=f(y)$.
+			\begin{align*}
+				[(x+1,1)] &= [(y+1,1)]\\
+				\Rightarrow (x+1)+1 &= 1+(y+1)\\
+				\Rightarrow x+1+1 &= y+1+1\\
+				\Rightarrow x &= y
+			\end{align*}
+			This proves that $f(n)$ is indeed one-one or, injective.
+			
+			\item We now show that, $f(\NN) = \ZZ^{+}$. By definition, $f(\NN) = \{f(n):n \in \NN\} = [(n+1,1)] \forall\ n \in \NN$. Now, $\ZZ^{+}$ is defined as, $\ZZ^{+} = \{[(j,1)]: j \in \NN, j\geq 2\}$.
+			
+			We know from the \texttt{Well-Ordering Property} of $\NN$, that the minimum element of $\NN$ is $1$. Thus, we can say that $n+1,\ \forall\ n\in \NN$ is greater than $2$. This makes the fact evident that,
+			$$f(\NN) = \{f(n):n \in \NN\} = \{[(n+1,1)]: n \in \NN,\ n+1 \geq 2\} = \{[(j,1)]: j \in \NN, j\geq 2\} = \ZZ^{+} $$
+			$$\Rightarrow f(\NN) = \ZZ^{+}$$
+			This proves the claim.
+			
+			\item We now show that $f(1) = \overline{1}$.
+			\begin{align*}
+				f(n) &= [(n+1,1)] \forall\ n \in \NN\\
+				\Rightarrow f(1) &= [(2,1)]\\
+				\overline{1} &= [(2,1)],\ from\ \texttt{Definition}\ \ref{definition:bar}\\
+				\Rightarrow f(1) &= \overline{1}
+			\end{align*}
+		This proves our claim.
+		
+		\item We need to show that, $\forall\ m,n \in \NN$, $f(m+n)= f(m)+f(n),\ f(mn) = f(m)\cdot f(n)$.\\
+		Let's first try proving,  $f(m+n)= f(m)+f(n)$.
+		\begin{align*}
+			f(m+n) &= [(m+n+1,1)]\\
+			f(m) &= [(m+1,1)]\\
+			f(n) &= [(n+1, 1)]\\
+			\Rightarrow f(m)+f(n) &= [(m+1,1)] + [(n+1, 1)]\\
+			&= [(m+n+1+1,1+1)]\\
+			&= [(m+n+1,1)]\\
+			\Rightarrow f(m+n) &= f(m) + f(n)
+		\end{align*}
+	This proves our claim.
+		\end{enumerate}
+	\end{proof}
+
+	\begin{corollary}
+		Let $f: \NN \mapsto \ZZ$ be the map defined in Theorem \ref{theorem:embed}. Then,
+		$$\ZZ = \{f(n):n \in \NN\} \cup \{-f(n):n \in \NN\} \cup \overline{0}$$
+	\end{corollary}
+	\textbf{\underline{Convention: }}\\
+ 	Let $f: \NN \mapsto \ZZ$ be the embedding map defined in Theorem \ref{theorem:embed}. We shall identify $f(n)$ with $n,\ \forall\ n \in \NN$. Then, $\ZZ = \{n \in \NN\} \cup \{-n|n \in \NN\} \cup \{\overline{0}\}$
+ 	
+ 	\begin{theorem}
+ 		\texttt{\textbf{Order in $\ZZ$}}\\
+ 		For all $a,b \in \ZZ$, we can say that,
+ 		{\color{Red}
+ 		\begin{enumerate}
+ 			\item $a>b$ iff $\exists\ x\in \ZZ^{+}$ such that $b+x = a$
+ 			\item $a \geq b$ iff either $a=b$ or $a>b$
+ 		\end{enumerate}
+ 		}
+ 	\end{theorem}
+ 
+ \section{Rationals}
+ 
+ We conclude the chapter by constructing the set of Rational Numbers out of the set of Integers. The construction, in this case as well, proceeds with an appropriate equivalence relation.
+ 
+ \begin{definition}
+ 	$\QQ$ - Equivalence Relation\\
+ 	Define $\sim_{\QQ}$ on $\ZZ \times \left(\ZZ \setminus \{0\}\right)$ by, $\forall (a,b),(p,q) \in (\ZZ \setminus \{ 0 \} )$
+ 	$$(a,b) \sim_{\QQ} (p,q) \Leftrightarrow aq = bp$$.
+ \end{definition}
+
+\begin{lemma}
+	$\sim_{\QQ}$ is an equivalence relation on $\ZZ \times (\ZZ \setminus \{0\})$.
+\end{lemma}
+
+\begin{proof}
+	We now check for the three conditions, viz. Reflexivity, Symmetry and Transitivity for the relation $\sim_{\QQ} \forall (a,b),(p,q) \in \ZZ \times (\ZZ \setminus \{0\})$.
+	\begin{enumerate}[(i)]
+		\item Reflexivity:\\
+		 We know that $(a,b) \sim_{\QQ} (p,q)$ iff $aq=bp$.\\
+		 This implies that $(a,b)\sim_{\QQ}(a,b) \Leftrightarrow ab=ba$, which is true from Theorem \ref{theorem:ring}.\\
+		 Therefore, it is proven that $\sim_{\QQ}$ is Reflexive.
+		 
+		 \item Symmetry:\\
+		 We know now that,
+		 \begin{align*}
+		 	(a,b) \sim_{\QQ} (p,q) \Leftrightarrow aq=bp \\
+		 	(p,q) \sim_{\QQ} (a,b) \Leftrightarrow pb=qa
+		 \end{align*}
+	 	Since both the above relations lead to the same result, we can conclude that $\sim_{\QQ}$ is Symmetric.
+	 	
+	 	\item Transitivity:\\
+	 	We know now that,
+	 	\begin{align*}
+	 		(a,b) \sim_{\QQ} (p,q) &\Leftrightarrow aq=bp \\
+	 		(p,q) \sim_{\QQ} (r,s) &\Leftrightarrow ps=qr \\
+	 		\Rightarrow (a,b) \sim_{\QQ} (r,s) &\Leftrightarrow as=br
+	 	\end{align*}
+	\end{enumerate}
+\end{proof}
 \end{document}
 
