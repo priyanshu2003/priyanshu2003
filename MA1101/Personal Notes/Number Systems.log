@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.3)  9 MAR 2022 02:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.3)  10 MAR 2022 10:56
 entering extended mode
 **"./Number Systems.tex"
 (Number Systems.tex
@@ -1376,16 +1376,33 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 494.
- [10] (Number Systems.aux)
+ [10]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 552.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 580.
+ [11]
+Underfull \hbox (badness 10000) in paragraph at lines 598--599
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 610--611
+
+ []
+
+[12] (Number Systems.aux)
 Package rerunfilecheck Info: File `"Number Systems".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33840 strings out of 478927
- 654543 string characters out of 2862392
- 1168155 words of memory out of 3000000
- 50916 multiletter control sequences out of 15000+600000
- 419936 words of font info for 133 fonts, out of 8000000 for 9000
+ 33866 strings out of 478927
+ 654905 string characters out of 2862392
+ 1168311 words of memory out of 3000000
+ 50924 multiletter control sequences out of 15000+600000
+ 420149 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  123i,21n,128p,10633b,1123s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\priya\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx
@@ -1403,9 +1420,9 @@ type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Number Systems.pdf" (10 pages, 245357 bytes).
+Output written on "Number Systems.pdf" (12 pages, 256928 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
+ 289 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
  42557 words of extra memory for PDF output out of 42996 (max. 10000000)
 

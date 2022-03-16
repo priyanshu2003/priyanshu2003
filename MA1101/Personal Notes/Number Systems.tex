@@ -482,7 +482,7 @@
  
  \section{Rationals}
  
- We conclude the chapter by constructing the set of Rational Numbers out of the set of Integers. The construction, in this case as well, proceeds with an appropriate equivalence relation.
+ We conclude the chapter by constructing the set of Rational Numbers out of the set of Integers. The construction, in this case as well, proceeds with an appropriate equivalence relation. (We represent Rationals here by using equivalence relations like $[(a_{1}, b_{1})]$, as we haven't defined the division operation on any of $\NN$, $\ZZ$ or $\QQ$. But, the essence remains the same, i.e., $[(m,n)]$ essentially means $\frac{m}{n}$)
  
  \begin{definition}
  	$\QQ$ - Equivalence Relation\\
@@ -511,13 +511,117 @@
 	 	Since both the above relations lead to the same result, we can conclude that $\sim_{\QQ}$ is Symmetric.
 	 	
 	 	\item Transitivity:\\
-	 	We know now that,
+	 	We now show that,
 	 	\begin{align*}
 	 		(a,b) \sim_{\QQ} (p,q) &\Leftrightarrow aq=bp \\
 	 		(p,q) \sim_{\QQ} (r,s) &\Leftrightarrow ps=qr \\
 	 		\Rightarrow (a,b) \sim_{\QQ} (r,s) &\Leftrightarrow as=br
 	 	\end{align*}
+ 	
+ 		Now,
+ 		\begin{align*}
+ 			as(p)\\
+ 			&= a(ps)\\
+ 			&= a(qr)\\
+ 			&= (aq)r\\
+ 			&= (bp)r\\
+ 			&= br(p)
+ 		\end{align*}
+ 		Now, since, $$as(p) = br(p) \Rightarrow as = br \Leftrightarrow (a,b) \sim_{\QQ} (r,s)$$
 	\end{enumerate}
+	Since, $\sim_{\QQ}$ displays all the three requisite properties viz. Reflexivity, Symmetry, and Transitivity, it is indeed an Equivalence Relation.
+\end{proof} 
+
+\begin{definition}
+	\texttt{Rational numbers}\\
+	Let us define, $$\QQ \defeq \ZZ \times (\ZZ \setminus \{0\}) = \{[(a,b)]:(a,b) \in \ZZ \times (\ZZ \setminus \{0\})\}$$
+	We also write,
+	$$\overline{0} \defeq [(0,1)]\ \&\ \overline{1} \defeq [(1,1)]$$
+	Let $\overline{a} \defeq [(a_{1}, a_{2})]$ and $\overline{b} \defeq [(b_{1}, b_{2})] \in \QQ$. Then we define,
+	\begin{enumerate}[i)]
+		\item \underline{Addition:}
+		$$a+b \defeq [(a_{1}b_{2}+a_{2}b_{1}, a_{2}b_{2})]$$
+		\item \underline{Multiplication:}
+		$$a \cdot b \defeq [a_{1}b_{1}, a_{2}b_{2}]$$
+	\end{enumerate}
+\end{definition}
+
+In the next Theorem \ref{theorem:rat}, we define the algebraic properties of $\QQ$.
+
+\begin{theorem}
+	
+	\begin{enumerate}
+	\item[A.] \underline{Addition:} ($(\QQ, +$) is an Abelian Group )
+	\begin{enumerate}
+		\item[A1.] $+$ is well-defined, associative, and commutative.
+		\item[A2.] $a+\overline{0} = a = \overline{0}+a$
+		\item[A3.] $\forall a \in \QQ \exists$, a unique $x$, denoted by $-a$, satisfying $a+x = \overline{0}$. We say that $-a$ is the \emph{negative} of $a$. 
+	\end{enumerate}
+	\item[B.] \underline{Multiplication:} ($(\QQ \setminus \{0\})$ is an Abelian Group)
+	\begin{enumerate}
+		\item[B1.] $\cdot$ is well-defined, associative and commutative.
+		\item[B2.] $a \cdot \overline{1} = a = \overline{1} \cdot a$, $\forall a \in \QQ \setminus \{0\}$
+		\item[B3.] $\forall a \in \QQ \setminus \{0\}$, $\exists$ a unique $y \in \QQ$ denoted by $a^{-1}$ such that $a \cdot y = \overline{1} = y \cdot a$. We say that $y$ is the \emph{inverse} of $a$.
+	\end{enumerate}
+	\item[C.] $a \cdot (b+c) = a \cdot b + a \cdot c, \forall\ a,b,c \in \QQ$
+	\end{enumerate}
+	In other words, $(\QQ, +, \cdot)$ is a field.
+	\label{theorem:rat}
+\end{theorem}
+
+\begin{proof}
+	A1. We first check if $+$ is well-defined over $\QQ$. Let $a = [(m,n)] = [(m',n')]$ and $b = [(p,q)] = [(p',q')]$. We need to show that, $[(mq+np, nq)] = [(m'q'+n'p', n'q')]$.
+	
+	Now, since, $[(m,n)] = [(m',n')] \Rightarrow mn'=nm'$ and $[(p,q)] = [(p',q')] \Rightarrow pq' = qp'$. Now, these can be written as, $mn' = nm' \Rightarrow mn'\cdot qq' = nm' \cdot qq'$ and $pq' = qp' \Rightarrow pq' \cdot nn' = qp' \cdot nn'$.
+	
+	Adding the two equations, $mn'qq'+pq'nn' = nm'qq'+qp'nn'\\ \Rightarrow mqn'q' + npn'q' = nqm'q' + nqn'p'$, which then implies that,\\ $(mq+np, nq) \sim_{\QQ} (m'q'+n'p', n'q') \Rightarrow [(mq+np, nq)] = [(m'q'+n'p', n'q')]$. Thus, $+$ is well-defined for $\QQ$.
+	
+	\begin{remark}
+		Note that the Associativity and Commutativity of $+$ for $\QQ$ can be proved in a similar way as done for $\ZZ$.
+	\end{remark}
+	
+	A2. ($a_{1}, a_{2}), (0,1) \in \ZZ \times (\ZZ \setminus \{0\})$
+	\begin{align*}
+		a + \overline{0} &= [(a_{1}, a_{2})] + [(0,1)]\\
+		&= [(a_{1} \cdot 1 + a_{2}\cdot 0, a_{2}\cdot 1)]\\
+		&= [(a_{1}, a_{2})]\\
+		&= a
+	\end{align*}
+
+	\begin{align*}
+		\overline{0} + a &=  [(0,1)]+[(a_{1}, a_{2})]\\
+		&= [(0 \cdot a_{2}+1\cdot a_{1}, 1 \cdot a_{2})]\\
+		&= [(a_{1}, a_{2})]\\
+		&= a
+	\end{align*}
+
+	This implies that the claim: $a+\overline{0} = a = \overline{0}+a$, is indeed true.\\[2pt]
+	
+	A3. We have defined $a$ as, $a = [(a_1, a_2)] \in \QQ$. Let us define $x$ as, $x \defeq [(-a_{1}, a_{2})] \in \QQ$.
+	
+	\begin{align*}	
+		a+x &= [(a_{1}, a_{2})] + [(-a_{1}, a_{2})]\\
+		&= [(a_{1}\cdot a_{2}-a_{2}\cdot a_{1}, a_{2}\cdot a_{2})]\\
+		&= [(0, a_{2}\cdot a_{2})]\\
+		&\sim_{\QQ} [(0,1)],\ as\ 0\cdot 1 = (a_{2}\cdot a_{2})\cdot 0 = 0\\
+		&= \overline{0} 
+	\end{align*} 
+
+	Now, since $a+x = \overline{0}$, $x \defeq [-a_{1}, a_{2}]$ is indeed the additive inverse in $\QQ$.\\[2pt]
+	
+	B1. We will first check if $\cdot$ is well-defined. Let $a = [(m,n)] = [(m',n')]$ and $b = [(p,q)] = [(p',q')]$. We have to simply show that, $[(m\cdot p, n \cdot q)] = [(m' \cdot p', n' \cdot q')]$.
+	
+	Since, $[(m,n)] = [(m',n')] \Rightarrow m\cdot n' = n\cdot m'$, and since, $[(p,q)] = [(p',q')] \Rightarrow p \cdot q' = q \cdot p'$. Mutliplying the two equations, we get,
+	
+	\begin{align*}
+		m\cdot n' \cdot p \cdot q' &= n \cdot m' \cdot q \cdot p'\\
+		\Rightarrow m \cdot p \cdot n' \cdot q' &= n \cdot q \cdot m' \cdot p'\\
+		\Rightarrow (m \cdot p)\cdot(  n' \cdot q') &= (n \cdot q)\cdot( \cdot m' \cdot p')\\
+		\Rightarrow (m\cdot p, n\cdot q) &\sim_{\QQ} (m' \cdot p', n' \cdot q')\\
+		\Rightarrow [(m\cdot p, n\cdot q)] &= [(m' \cdot p', n' \cdot q')]
+	\end{align*}
+	
+	Thus, $\cdot$ is well-defined over $\QQ$.
 \end{proof}
 \end{document}
 
