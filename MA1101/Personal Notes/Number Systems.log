@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.3)  10 MAR 2022 10:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.12.3)  17 MAR 2022 02:45
 entering extended mode
 **"./Number Systems.tex"
 (Number Systems.tex
@@ -1393,16 +1393,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 610--611
 
  []
 
-[12] (Number Systems.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--625
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--677
+
+ []
+
+[13] [14] (Number Systems.aux)
 Package rerunfilecheck Info: File `"Number Systems".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33866 strings out of 478927
- 654905 string characters out of 2862392
- 1168311 words of memory out of 3000000
+ 33870 strings out of 478927
+ 654933 string characters out of 2862392
+ 1168310 words of memory out of 3000000
  50924 multiletter control sequences out of 15000+600000
- 420149 words of font info for 137 fonts, out of 8000000 for 9000
+ 420200 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  123i,21n,128p,10633b,1123s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\priya\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx
@@ -1420,9 +1440,9 @@ type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Number Systems.pdf" (12 pages, 256928 bytes).
+Output written on "Number Systems.pdf" (14 pages, 261595 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 500000)
+ 298 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
  42557 words of extra memory for PDF output out of 42996 (max. 10000000)
 

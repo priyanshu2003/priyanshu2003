@@ -621,7 +621,71 @@ In the next Theorem \ref{theorem:rat}, we define the algebraic properties of $\Q
 		\Rightarrow [(m\cdot p, n\cdot q)] &= [(m' \cdot p', n' \cdot q')]
 	\end{align*}
 	
-	Thus, $\cdot$ is well-defined over $\QQ$.
+	Thus, $\cdot$ is well-defined over $\QQ$.\\[2pt]
+	
+	Now, we check if $\cdot$ is associative. Let $a=[m,n]$, $b=[p,q]$, and $c=[r,s]$. We need to show that, $a\cdot (b \cdot c) = (a \cdot b)\cdot c$.
+	
+	\begin{align*}
+		a\cdot (b \cdot c) &= [(m,n)] \cdot ([(p,q)]\cdot [r,s])\\
+		[(m,n)] \cdot ([(p,q)]\cdot [r,s]) &= [(m,n)] \cdot [(pr, qs)]\\
+		&= [(mpr, nqs)]\\
+		&= [(mp, nq)] \cdot [(r,s)]\\
+		&= ([(m,n)] \cdot [(p,q)]) \cdot [(r,s)]\\
+		&= (a \cdot b) \cdot c
+	\end{align*}
+
+	We have now established the associativity of $\cdot$ over $\QQ$.\\[2pt]
+	
+	Now, we move on to prove the commutativity of $\cdot$ over $\QQ$. Let $a=[(m,n)]$ and $b=[(p,q)]$
+	
+	\begin{align*}
+		a \cdot b &= [(m,n)] \cdot [(p,q)]\\
+		[(m,n)] \cdot [(p,q)] &= [(mp, nq)]\\
+		&= [(pm, qn)]\\
+		&= [(p,q)] \cdot [(m,n)]\\
+		&= b \cdot a
+	\end{align*}
+
+	B2. $(a_{1}, a_{2}), (1,1) \in \ZZ \times (\ZZ \setminus \{0\})$.
+	
+	\begin{align*}
+		a \cdot \overline{1} &= [(a_{1}, a_{2})] \cdot [(1,1)]\\
+		&= [(a_{1} \cdot 1, a_{2} \cdot 1)]\\
+		&= [(a_{1}, a_{2})]\\
+		&= a
+	\end{align*}
+
+	\begin{align*}
+		\overline{1} \cdot a &= [(1,1)] \cdot [(a_{1}, a_{2})]\\
+		&= [(1 \cdot a_{1}, 1 \cdot a_{2})]\\
+		&= [(a_{1}. a_{2})]\\
+		&= a
+	\end{align*}
+
+	Therefore, $$a \cdot \overline{1} = a = \overline{1} \cdot a$$\\
+	
+	B3. $a = [(m,n)] \in \QQ \setminus 0$. We need to show that $\exists$ a $y$ such that, $a \cdot y = \overline{1} = y \cdot a\ \forall\ y \in \QQ$. Let $y = [(n,m)]$:
+	
+	\begin{align*}
+		a \cdot y &= [(m,n)] \cdot [(n,m)]\\
+		&= [(mn, nm)]\\
+		&= [(1,1)]\ as\ [(mn, nm)] = [(1,1)] \Leftrightarrow mn = nm\\
+		&= \overline{1} 
+	\end{align*}
+
+	Similarly, it can be proved that $y \cdot a = \overline{1}$. Therefore, $a \cdot y = \overline{1} = y \cdot a$.\\[2pt]
+	
+	C. Let $a=[m,n]$, $b=[p,q]$, and $c=[r,s]$. We need to show that $a \cdot (b+c) = a \cdot b + a \cdot c\ \forall\ a,b,c \in \QQ$.
+	\begin{align*}
+		a \cdot (b+c) &= [(m,n)] \cdot ([(p,q)]+[(r,s)]) \\
+		&= [(m,n)] \cdot [(ps+qr, qs)]\\
+		&= [(mps+mqr, nqs)]\\
+		a\cdot b + a\cdot c &= [(m,n)]\cdot [(p,q)] + [(m,n)] \cdot [(r,s)]\\
+		&= [(mpns + nqmr, nqns)]\\
+	\end{align*}
+
+	Now, $$[(mps+mqr, nqs)] = [(mpns + nqmr, nqns)]$$ as, $$mps \cdot nqns + mqr \cdot nqns = mpns \cdot nqs + nqmr \cdot nqs$$ 
+	$$mpsnqns + mqrnqns = mpnsnqs + nqmrnqs$$ (all the terms cancel out).
 \end{proof}
 \end{document}
 
