@@ -1,0 +1,230 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage[none]{hyphenat}% prevents LaTeX from adding hyphenated words
+\usepackage{fancyhdr} %helps introduce fancy headers and footers in the document
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\pagestyle{fancy}
+\fancyhead[L]{PH1102 Experiment - 3}
+\fancyhead[R]{Priyanshu Mahato: \color{mauve} \href{mailto:pm21ms002@iiserkol.ac.in}{pm21ms002@iiserkol.ac.in}}
+\fancyfoot[C]{\thepage}
+\setlength\parindent{0em}
+
+\begin{document}
+	\thispagestyle{empty}
+	\begin{titlepage}
+		\begin{center}
+			\vspace{1cm}
+			\Large\textbf{Physics Laboratory PH1102}\\
+			\vspace{1cm}
+			\large\textbf{Lab Report}
+			\vfill%fills rest of the page with spaces and adjusts as you add elements to the page
+			\line(1,0){450}\\[16pt]%creates a line
+			\huge\textbf{Experiment No.: 03}\\[10pt]
+			\Large\textbf{- STOKES LAW AND VISCOSITY -}\\[15pt]
+			\line(1,0){450}
+			\vfill
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.15]{IISER-K_Logo.png}
+			\end{figure}
+			By : Priyanshu Mahato\\
+			Roll No. : pm21ms002\\
+			\today\\
+		\end{center}
+	\end{titlepage}
+
+	\setcounter{page}{0}
+	\tableofcontents
+	\pagebreak
+
+	\section{Aim}
+	
+	To determine the coefficient of viscosity of a liquid using a falling ball viscometer 
+	(employing Stokes’ law).
+	
+	\section{Experimental apparatus}
+	
+	The main experimental apparatus consists of a glass tube containing the experimental 
+	liquid. \textbf{P} and \textbf{Q} are two adjustable reference marks along the tube length. The entire glass 
+	system is supported by a wooden stand. Besides this you will need a few steel balls of 
+	different diameter, screw gauge, digital balance, vernier calliper, stop watch, and meter scale 
+	for this experiment.
+	
+	\section{Principle of the Experiment}
+	
+	A body moving in a fluid is acted on by a frictional force in the opposite direction of its 
+	velocity. The magnitude of this force depends on the geometry of the body, its velocity, and 
+	the internal friction of the fluid. A measure for the internal friction is given by the dynamic 
+	viscosity \textbf{$\eta$}. For a spherical ball of radius \textbf{$r$} moving at velocity \textbf{$v$} in an infinitely extended 
+	fluid of dynamic viscosity \textbf{$\eta$}, G. G. Stokes derived the viscous force to be:
+	\begin{align}
+		F_{v} = 6\pi \eta r v
+	\end{align}
+	If the spherical ball (density $\rho$) is dropped from rest at the upper surface of a vertical liquid (density $\sigma$ ) column , gravitational force $F_{g} = \frac{4}{3} \pi r^{3} \rho g$ ($g=$ acceleration due to gravity) and buoyancy force $F_{b} = \frac{4}{3} \pi r^{3} \sigma g$ act on it besides viscous force $F_{v} = 6 \pi \eta r v$.
+	
+	Initially, $F_{v}$ is zero because ball started at rest. So, the ball accelerates downwards because 
+	there is a net downward force. Then $F_{v}$ starts to increase. Eventually a force balance 
+	$F_{v} + F_{b} = F_{g}$ is reached and the ball attains a steady terminal velocity $v_{t}$. Using the force 
+	balance condition one can easily derive,
+	\begin{align}
+		\eta = \frac{2}{9} \frac{r(\rho - \sigma)g}{v_{t}}
+	\end{align}
+	Actually, Eq. (1) [derived under the assumption of infinitely extended liquid] should be 
+	corrected for the finite size of the liquid column. For the movement of the spherical ball 
+	along the axis of a liquid cylinder of radius $R$ and length $h$, the viscous force is,
+	\begin{align*}
+		F_{v} = 6\pi \eta rv \left(1 + 3.3\frac{r}{h}\right) \left(1 + 2.4 \frac{r}{R}\right)
+	\end{align*}
+	For the experimental situation in our lab, $\frac{r}{R} \approx 0.1$ and $\frac{r}{h} \approx 0.001$. Thus, finite length correction $\left(1 + 3.3\frac{r}{h}\right)$ may be ignored. Incorporating the correction due to finite radius of the 
+	liquid column, Eq. (2) becomes:
+	\begin{align}
+		\eta = \frac{2}{9} \frac{r^{2} (\rho - \sigma)g}{v_{t} \left(1 + 2.4 \frac{r}{R}\right)}
+		\label{equation:tits}
+	\end{align}
+	\section{Diagram}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{diagram.png}
+		\caption{Schematic Diagram}
+	\end{figure}
+
+	\pagebreak
+	
+	\section{Results and Observations}
+	
+	Tables:
+	
+	\begin{enumerate}
+		\item Determination of radius and mass of the spherical balls (for three different radii)\\
+		Density of Castor oil = 0.961 $g \cdot cc^{-1}$\\
+		Today's temperature = $23 ^{\circ} C$\\
+		Least count of the Screw Gauge = 0.001 cm\\
+		Least count of Digital Balance = 0.01 g\\
+		Least count of stopwatch = 0.01 s\\
+		
+		\begin{enumerate}
+			\item Ball 1 :
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{table 1.png}
+			\end{figure}
+		
+			\item Ball 2 :
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{table 2.png}
+			\end{figure}
+		
+			\pagebreak
+		
+			\item Ball 3 :
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{table 3.png}
+			\end{figure}
+		\end{enumerate}
+	
+	\item Measurement of terminal velocity\\
+	Distance travelled by Balls is 80 cm = 0.8 m\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{table 4.png}
+	\end{figure}
+
+	\item Determination of the Inner Diameter of Glass Cylinder\\
+	Vernier Constant of Vernier Calliper = 0.002 cm\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{table 5.png}
+	\end{figure}
+	\end{enumerate}
+
+	\pagebreak
+
+	\section{Plot}
+	
+	Plot of Velocity ($v$) in $ms^{-1}$ vs. Square of Radius ($r^{2}$) in $cm^{2}$:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{plot 1.png}
+	\end{figure}
+
+	\section{Inference}
+	
+	From the above graph, we see that with the given set of data, the resultant line is not a 
+	straight line. To remove it, we need to find the best possible fit of the line. If we fit the line 
+	within the given data-points in the best possible manner, the slope of the line comes out to be 243.615 $cm^{-1}s^{-1}$.\\
+	The fitted graph is:
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{plot 2.png}
+	\end{figure}
+
+	This value is the value of the expression: $\frac{2}{9} \frac{(\rho - \sigma)g}{\eta \left(1 + 2.4 \frac{r}{R}\right)}$\\
+	
+	According to the tables, the average value of r is : 0.1812 cm. The value of R is 2.305 cm. 
+	
+	Hence, substituting the values (taking the density of Castor oil as 0.961 $g \cdot cc^{-1}$ and density of 
+	the material as the average value 10.29 $g \cdot cc^{-1}$), we get the value of $\eta$ as : 6.35 $poise$ $=$ 0.635 $Pa \cdot s$
+	
+	The given value of co-efficient of viscosity of Castor oil is 0.650 $Pa \cdot s$
+	
+	\section{Error Analysis}
+	
+	\textbf{The error in the calculation of $\eta$ is :} 
+	\begin{align*}
+		Absolute\ Error &= |0.650 - 0.635|\\
+		&= 0.015\ Pa \cdot s\\
+		Percentage\ Error &= \frac{0.015}{0.650} \times 100 \%\\
+		&= 2.3 \%
+	\end{align*}
+
+	\textbf{Systematic/Instrumentation Error}
+	
+	We used Equation \ref{equation:tits} to find the value of $\eta$. In the process, errors of the measured quantities get accumulated and propagated to give a \emph{systematic error} in the value of $\eta$. Using Partial Derivatives in the Equation \ref{equation:tits}, we get,
+	$$\frac{\delta\eta}{\eta} = \left|\frac{2}{r} - \frac{2.4}{R + 2.4r} - \frac{9m}{4\pi r^{4} (\rho - \sigma)}\right| \delta r + \left|\frac{1}{x}\right| \delta x + \left|\frac{1}{t}\right| \delta t + \left|\frac{2.4r}{R(R + 2.4r)}\right| \delta R + \left|\frac{3}{4 \pi r^{3}(\rho - \sigma)}\right| \delta m$$
+	
+	Now, substituting different parameters and least counts of the instruments, as individual errors in the above formula, we obtain,
+	
+	\begin{enumerate}
+		\item \textbf{Ball 1:} \\
+		For Ball 1, the systematic error comes out to be about 9.8\%
+		\item \textbf{Ball 2:}\\
+		For Ball 2 the systematic error comes out to be about 6.6\%
+		\item \textbf{Ball 3:}\\
+		For Ball 3 the systematic error comes out to be about 3.4\%
+	\end{enumerate}
+	
+	\section{Sources of Error}
+	
+	\begin{enumerate}
+		\item The point where the glass bead attains the terminal velocity is an eye-estimated length and 
+		has 100$\%$ chance for errors.
+		
+		\item The inaccuracy in screw-gauge, vernier-calliper and digital balance can contribute to the errors of 
+		the constituting variables.
+		
+		\item Inaccuracy in working with the stopwatch as the spherical watch passes the two reference marks (namely, \textbf{P} and \textbf{Q}).
+	\end{enumerate}
+		\section{Conclusion}
+		
+		The Experimental value of the co-efficient of viscosity of Castor Oil differs from the actual 
+		one by 2.3 $\%$.
+\end{document}
