@@ -12,6 +12,7 @@
 \usepackage{multirow}
 \usepackage{color}
 \usepackage{listings}
+\usepackage{enumitem}
 
 \pagestyle{fancy}
 \fancyhead{}
@@ -87,12 +88,13 @@
 		\item Inextensible String
 		\item Bob (here, Ball)
 		\item Rigid Support
+		\item Stopwatch/Timer
 	\end{enumerate}
 
 	\section{Description and Image of the Setup}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.25]{Experiment}
+		\includegraphics[scale=0.2]{Experiment}
 		\caption{Image of the Setup}
 	\end{figure}
 
@@ -155,6 +157,20 @@
 		\end{tabular}
 	\end{table}
 
+	For string length 120.00 \emph{cm}:-
+	
+	\begin{table}[H]
+		\begin{tabular}{|l|l|l|l|l|}
+			\hline
+			Sl. No. & Oscillations & Total Time Taken & Time per Oscillation (s) & Average              \\ \hline
+			1       & 20           & 44.61      & 2.23                     & \multirow{5}{*}{2.22} \\ \cline{1-4}
+			2       & 20           & 44.81      & 2.24                     &                       \\ \cline{1-4}
+			3       & 20           & 44.20      & 2.21                     &                       \\ \cline{1-4}
+			4       & 20           & 44.43      & 2.22                     &                       \\ \cline{1-4}
+			5       & 20           & 44.09      & 2.20                     &                       \\ \hline
+		\end{tabular}
+	\end{table}
+
 	For string length 139.75 \emph{cm}:-
 
 	\begin{table}[H]
@@ -178,7 +194,7 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.3]{photo}
+		\includegraphics[scale=0.7]{photo}
 		\caption{Graph of $t^{2}$ vs. $l$}
 	\end{figure}
 
@@ -188,4 +204,55 @@
 	$$\Rightarrow \frac{4\pi^{2}}{g} = 0.041038\ cm^{-1} s^{2}$$
 	$$\Rightarrow g = \frac{4\pi^{2}}{ 0.041038}\ cms^{-2} = 961.997\ cms^{-2} \approxeq 9.62\ ms^{-2}$$
 	$$\boxed{g \approxeq 9.62\ ms^{-2}}$$
+	
+	\section{Error Analysis}
+	
+	The true/literature value of acceleration due to gravity is taken as \textbf{9.8 \emph{$ms^{-2}$}}. 
+	
+	\begin{align*} 
+	Absolute\ Error &= |\texttt{True\ Value - Calculated\ Value}|\\
+	&= |9.8 - 9.62|\\
+	&= 0.18\ ms^{-2}
+	\end{align*}
+
+	\begin{align*}
+		Percentage\ Error &= \frac{Absolute\ Error}{True\ Value} \times 100\%\\
+		&= \frac{0.18}{9.8} \times 100\% \\
+		&\approx 1.84\%
+	\end{align*}
+
+	\section{Systemic Error Analysis}
+	
+	From the equation, $$g = \frac{4\pi^{2}l}{T^{2}}$$
+	
+	Since we are using Physical Instruments to measure the parameters $l$ and $T$, we are bound to have error/uncertainty in our calculated value of $g$. Using Partial Derivatives in the above equation, we get, $$\frac{\delta(g)}{g} = \left|\frac{1}{l}\right|\delta l + \left|\frac{2}{T}\right|\delta T$$
+	
+	\pagebreak
+	
+	Now, substituting different parameters and least counts of instruments as individual errors in the equation, we obtain:-
+	
+	\begin{enumerate}
+		\item For $l = 139.75\ cm$ $$\frac{\delta g}{g} = 0.9\%$$
+		\item For $l = 120.00\ cm$ $$\frac{\delta g}{g} = 0.98\%$$
+		\item For $l = 96.05\ cm$ $$\frac{\delta g}{g} = 1.1\%$$
+		\item For $l = 71.25\ cm$ $$\frac{\delta g}{g} = 1.3\%$$
+		\item For $l = 55.75\ cm$ $$\frac{\delta g}{g} = 1.5\%$$
+	\end{enumerate}
+
+	\section{Discussion}
+	
+	The nature of the plot is a straight line which is also true as per the equation, $$T = 2\pi \sqrt{\frac{l}{g}}$$
+	
+	To reduce the error we have allowed the ball to oscillate for some time to reduce the effect of torsion. We will also need to consider the motion to be planar. We also need to make sure that the oscillations need to be performed with the string at a very small angle from the equilibrium position. Otherwise, the above formula will not hold. 
+	
+	\section{Sources of Error}
+	
+	\begin{enumerate}[label=\alph*]
+		\item There might be slight torsion in the string used.
+		\item The string might be slightly extensible.
+		\item Ball might not have uniform mass distribution and may not be perfectly spherical.
+		\item Air resistance might come into play, but here it is neglected.
+		\item Human sources of Error like stopping the stopwatch at exactly 20 oscillations of the pendulum, etc.
+	\end{enumerate}
+	
 \end{document}
