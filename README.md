@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @priyanshu2003
+- 👋 Hi, I’m @sage2003
 - 🙇‍♂️ I'm an undergrad at IISER - Kolkata, India, pursuing an Integrated BS-MS course.
 - 👀 I’m interested in Astrophysics and QM
 - 🌱 I’m currently learning Python(NumPy, SciPy, AstroPy, MatPlotLib, SymPy, Pandas, Numba, etc.)
