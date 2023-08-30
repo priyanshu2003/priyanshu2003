@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @sage2003
 - 🙇‍♂️ I'm an undergrad at IISER - Kolkata, India, pursuing an Integrated BS-MS course.
-- 👀 I’m interested in Astrophysics and QM
+- 👀 I’m interested in Astrophysics and Theoretical HEP
 - 🌱 I’m currently learning Python(NumPy, SciPy, AstroPy, MatPlotLib, SymPy, Pandas, Numba, etc.)
 - 💞️ I’m looking to collaborate on Science Projects involving Python programming
 - 📫 How to reach me on email: pm21ms002@gmail.com
